@@ -1,0 +1,2012 @@
+[
+ {
+  "id": "correct-0",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Accounting for microbial immigration from influent is essential to accurately distinguish between active, process-relevant populations and transient organisms within anaerobic digester communities [1].\n\nReferences\n[1] Kirkegaard, R. H., McIlroy, S. J., Kristensen, J. M., et al. (2017). The impact of immigration on microbial community composition in full-scale anaerobic digesters. Scientific Reports. https://doi.org/10.1038/s41598-017-09303-0",
+  "truth": {
+   "work": "10.1038/s41598-017-09303-0"
+  }
+ },
+ {
+  "id": "fabricated-0",
+  "type": "fabricated",
+  "subtype": "fake_doi",
+  "expected": "fabricated",
+  "text": "Specific Bacillus subtilis strains serve as effective probiotic feed additives that significantly reduce mortality in catfish by providing protection against common aquatic bacterial pathogens [1].\n\nReferences\n[1] Sterling, M. T., Rodriguez, E. V., & Thorne, J. H. (2011). Genomic Characterization and Efficacy of Bacillus subtilis Isolates in Mitigating Aeromonas hydrophila Infections in Ictalurus punctatus. Journal of Aquatic Animal Health and Biotechnology. https://doi.org/10.1371/5bd14dcc31",
+  "truth": {
+   "work": "10.1371/journal.pone.0045793"
+  }
+ },
+ {
+  "id": "wrong_details-0",
+  "type": "wrong_details",
+  "subtype": "wrong_year",
+  "expected": "wrong_details",
+  "text": "TWEAK promotes renal inflammation by transactivating the epidermal growth factor receptor through an ADAM17-dependent mechanism that triggers downstream ERK signaling and proinflammatory cytokine expression [1].\n\nReferences\n[1] Rayego‐Mateos, S., Morgado‐Pascual, J. L., Sanz, A. B., et al. (2016). TWEAK transactivation of the epidermal growth factor receptor mediates renal inflammation. The Journal of Pathology. https://doi.org/10.1002/path.4250",
+  "truth": {
+   "work": "10.1002/path.4250"
+  }
+ },
+ {
+  "id": "misused-0",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "The hierarchical structure of the Big Five Inventory-2, incorporating fifteen specific facet traits, provides a more reliable and predictive framework for assessing personality than its predecessor [1].\n\nReferences\n[1] Eldar, Y. C., Sidorenko, P., Mixon, D. G., et al. (2014). Sparse Phase Retrieval from Short-Time Fourier Measurements. IEEE Signal Processing Letters. https://doi.org/10.1109/lsp.2014.2364225",
+  "truth": {
+   "claimWork": "10.1037/pspp0000096",
+   "refWork": "10.1109/lsp.2014.2364225"
+  }
+ },
+ {
+  "id": "contradicted-0",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Relying on clinical assessments and computed tomography imaging alongside RT-qPCR testing fails to enhance diagnostic accuracy, as these redundant measures merely complicate the management of SARS-CoV-2 infections without overcoming the inherent limitations of molecular testing [1].\n\nReferences\n[1] Wang, Y., Kang, H., Liu, X., et al. (2020). Combination of RT‐qPCR testing and clinical features for diagnosis of COVID‐19 facilitates management of SARS‐CoV‐2 outbreak. Journal of Medical Virology. https://doi.org/10.1002/jmv.25721",
+  "truth": {
+   "work": "10.1002/jmv.25721"
+  }
+ },
+ {
+  "id": "correct-1",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "The maturity stage and drying method significantly influence the color, bulk density, and water absorption capacity of plantain and cooking banana flours [1].\n\nReferences\n[1] Falade, K. O., & Oyeyinka, S. A. (2014). Color, Chemical and Functional Properties of Plantain Cultivars and Cooking Banana Flour as Affected by Drying Method and Maturity. Journal of Food Processing and Preservation. https://doi.org/10.1111/jfpp.12292",
+  "truth": {
+   "work": "10.1111/jfpp.12292"
+  }
+ },
+ {
+  "id": "fabricated-1",
+  "type": "fabricated",
+  "subtype": "no_doi",
+  "expected": "fabricated",
+  "text": "Algorithms combining cirrhosis and hepatic decompensation codes provide a highly accurate method for identifying patients with end-stage liver disease within administrative databases [1].\n\nReferences\n[1] Thorne, M. V., Sterling, E. R., & Vance, J. P. (2012). Comparative Performance of ICD-10 Coding Algorithms for Ascertaining End-Stage Liver Disease in Large-Scale Administrative Datasets. Journal of Health Informatics and Hepatology Research.",
+  "truth": {
+   "work": "10.1002/pds.3290"
+  }
+ },
+ {
+  "id": "wrong_details-1",
+  "type": "wrong_details",
+  "subtype": "wrong_author",
+  "expected": "wrong_details",
+  "text": "Emerging therapeutic interventions, ranging from pharmacological agents to robotic-assisted physiotherapy, show significant potential for enhancing neuroplasticity and functional recovery in patients following a stroke [1].\n\nReferences\n[1] Zou, Y., & Riley, J. D. (2008). Neuroplasticity and brain repair after stroke. Current Opinion in Neurology. https://doi.org/10.1097/wco.0b013e3282f36cb6",
+  "truth": {
+   "work": "10.1097/wco.0b013e3282f36cb6"
+  }
+ },
+ {
+  "id": "misused-1",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Peptide-based non-viral vectors offer a safe, flexible, and efficient alternative to viral systems for the targeted intracellular delivery of therapeutic nucleic acids [1].\n\nReferences\n[1] Liu, Y., Kim, H., Franklin, R., et al. (2011). Linking Spectral and Electrochemical Analysis to Monitor c‐type Cytochrome Redox Status in Living Geobacter sulfurreducens Biofilms. ChemPhysChem. https://doi.org/10.1002/cphc.201100246",
+  "truth": {
+   "claimWork": "10.1039/c8tb03124j",
+   "refWork": "10.1002/cphc.201100246"
+  }
+ },
+ {
+  "id": "contradicted-1",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Pediatric severe sepsis and septic shock result in remarkably comparable case-fatality rates across both developing countries and developed nations [1].\n\nReferences\n[1] Tan, B., Wong, J. J., Sultana, R., et al. (2019). Global Case-Fatality Rates in Pediatric Severe Sepsis and Septic Shock. Archives of Pediatrics and Adolescent Medicine. https://doi.org/10.1001/jamapediatrics.2018.4839",
+  "truth": {
+   "work": "10.1001/jamapediatrics.2018.4839"
+  }
+ },
+ {
+  "id": "correct-2",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "A mathematical model based on M/G/1 queueing theory effectively determines optimal device density while balancing packet delay, loss probability, and battery longevity in unslotted CSMA/CA networks [1].\n\nReferences\n[1] Kim, T. O., Park, J., Chong, H. J., et al. (2008). Performance analysis of IEEE 802.15.4 non-beacon mode with the unslotted CSMA/CA. IEEE Communications Letters. https://doi.org/10.1109/lcomm.2008.071870",
+  "truth": {
+   "work": "10.1109/lcomm.2008.071870"
+  }
+ },
+ {
+  "id": "fabricated-2",
+  "type": "fabricated",
+  "subtype": "fake_doi",
+  "expected": "fabricated",
+  "text": "The formation of olfactory long-term memory in honeybees is accompanied by a transcription-dependent increase in the density of synaptic microglomeruli within the mushroom bodies [1].\n\nReferences\n[1] Kolarov, E. V., & Sterling, M. T. (2011). Structural Plasticity and Synaptic Remodeling in the Mushroom Bodies Following Long-Term Associative Learning. Journal of Comparative Neurobiology and Insect Physiology. https://doi.org/10.1523/2684e4edaa",
+  "truth": {
+   "work": "10.1523/jneurosci.0841-10.2010"
+  }
+ },
+ {
+  "id": "wrong_details-2",
+  "type": "wrong_details",
+  "subtype": "real_doi_other_title",
+  "expected": "wrong_details",
+  "text": "The degradation of both the electrolyte salt and the binder contributes to the formation of surface residues that block cathode pores and accelerate capacity fading in lithium-oxygen batteries [1].\n\nReferences\n[1] Younesi, R., Hahlin, M., Treskow, M., et al. (2012). Long-term follow-up after endoscopic resection for superficial esophageal squamous cell carcinoma: a multicenter Western study. The Journal of Physical Chemistry C. https://doi.org/10.1021/jp303691m",
+  "truth": {
+   "work": "10.1021/jp303691m"
+  }
+ },
+ {
+  "id": "misused-2",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Prostate cancer patients harbor a population of tumor antigen-specific CD8+ regulatory T cells that suppress anti-tumor immune responses through an IL-35-dependent mechanism reversible by CTLA-4 blockade [1].\n\nReferences\n[1] Fallgren, M., Abbas, T., Allio, S., et al. (2019). Multicast and Broadcast Enablers for High-Performing Cellular V2X Systems. IEEE Transactions on Broadcasting. https://doi.org/10.1109/tbc.2019.2912619",
+  "truth": {
+   "claimWork": "10.4049/jimmunol.1201744",
+   "refWork": "10.1109/tbc.2019.2912619"
+  }
+ },
+ {
+  "id": "contradicted-2",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Interactive data visualization tools consistently fail to heighten public concern or certainty regarding climate change, as individual responses remain deeply tethered to geographic proximity to projected impacts [1].\n\nReferences\n[1] Herring, J., VanDyke, M. S., Cummins, R. G., et al. (2016). Communicating Local Climate Risks Online Through an Interactive Data Visualization. Environmental Communication. https://doi.org/10.1080/17524032.2016.1176946",
+  "truth": {
+   "work": "10.1080/17524032.2016.1176946"
+  }
+ },
+ {
+  "id": "correct-3",
+  "type": "correct",
+  "subtype": "no_doi",
+  "expected": "ok",
+  "text": "De novo transcriptome assembly provides a robust framework for identifying orthologous genes and resolving phylogenetic relationships across diverse anthozoan species [1].\n\nReferences\n[1] Kitchen, S. A., Crowder, C. M., Poole, A. Z., et al. (2015). De Novo Assembly and Characterization of Four Anthozoan (Phylum Cnidaria) Transcriptomes. G3 Genes Genomes Genetics.",
+  "truth": {
+   "work": "10.1534/g3.115.020164"
+  }
+ },
+ {
+  "id": "fabricated-3",
+  "type": "fabricated",
+  "subtype": "no_doi",
+  "expected": "fabricated",
+  "text": "Implementing dynamic wireless charging for electric vehicles requires overcoming significant technical hurdles related to high-power energy transfer, utility-scale management, and reliable vehicle-to-infrastructure communication in dense urban environments [1].\n\nReferences\n[1] Thorne, M. V., Sterling, E. R., & Vance, J. K. (2014). Operational Impediments and Grid Integration Strategies for Dynamic Inductive Charging Systems: A Decade of ORNL Field Data. IEEE Transactions on Transportation Electrification.",
+  "truth": {
+   "work": "10.1109/mcas.2015.2419012"
+  }
+ },
+ {
+  "id": "wrong_details-3",
+  "type": "wrong_details",
+  "subtype": "wrong_year",
+  "expected": "wrong_details",
+  "text": "Integrating structural knowledge and spatial relationships into a region-based convolutional neural network significantly improves the detection accuracy of small, complex transmission line fittings in aerial imagery [1].\n\nReferences\n[1] Zhai, Y., Yang, X., Wang, Q., et al. (2017). Hybrid Knowledge R-CNN for Transmission Line Multifitting Detection. IEEE Transactions on Instrumentation and Measurement.",
+  "truth": {
+   "work": "10.1109/tim.2021.3096600"
+  }
+ },
+ {
+  "id": "misused-3",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Traditional experience machine thought experiments are fundamentally flawed by status quo bias, and a more neutral alternative reveals that such scenarios fail to provide conclusive evidence regarding internalist well-being theories [1].\n\nReferences\n[1] Fuxé, K., Fredholm, B. B., Agnati, L., et al. (2008). Interaction of Ergot Drugs with Central Monoamine Systems. Pharmacology.",
+  "truth": {
+   "claimWork": "10.1080/09515089.2012.757889",
+   "refWork": "10.1159/000136813"
+  }
+ },
+ {
+  "id": "contradicted-3",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Critically ill stroke patients consistently demonstrate a clear understanding of trial purposes and randomization, reinforcing the validity of informed consent as a robust contract between autonomous, equal parties [1].\n\nReferences\n[1] Mangset, M., Før­de, R., Nessa, J., et al. (2008). “I don’t like that, it’s tricking people too much…”: acute informed consent to participation in a trial of thrombolysis for stroke. Journal of Medical Ethics.",
+  "truth": {
+   "work": "10.1136/jme.2007.023168"
+  }
+ },
+ {
+  "id": "correct-4",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Progesterone regulates female reproductive processes through a complex interplay between rapid, non-genomic signaling pathways and traditional transcriptional mechanisms [1].\n\nReferences\n[1] Gellersen, B., Fernandes, M. S., & Brosens, J. J. (2008). Non-genomic progesterone actions in female reproduction. Human Reproduction Update. https://doi.org/10.1093/humupd/dmn044",
+  "truth": {
+   "work": "10.1093/humupd/dmn044"
+  }
+ },
+ {
+  "id": "fabricated-4",
+  "type": "fabricated",
+  "subtype": "fake_doi",
+  "expected": "fabricated",
+  "text": "Stigmatization in patients with inflammatory bowel disease significantly exacerbates psychological distress and diminishes overall quality of life, necessitating targeted clinical interventions to improve patient outcomes [1].\n\nReferences\n[1] Moretti, E. V., & Sterling, J. T. (2019). Navigating the Invisible Burden: A Longitudinal Analysis of Stigma and Disclosure Patterns in Inflammatory Bowel Disease Patients. Journal of Psychosomatic Gastroenterology and Hepatology. https://doi.org/10.1093/36434ef251",
+  "truth": {
+   "work": "10.1093/ibd/izz260"
+  }
+ },
+ {
+  "id": "wrong_details-4",
+  "type": "wrong_details",
+  "subtype": "wrong_author",
+  "expected": "wrong_details",
+  "text": "Bacterial small regulatory RNAs can enhance gene expression by interacting with various regions of target mRNAs, often requiring the assistance of RNA chaperones and ribonucleases to stabilize transcripts [1].\n\nReferences\n[1] Nygaard, E., & Vanderpool, C. K. (2015). Target activation by regulatory RNAs in bacteria. FEMS Microbiology Reviews.",
+  "truth": {
+   "work": "10.1093/femsre/fuv016"
+  }
+ },
+ {
+  "id": "misused-4",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Diagnostic leukapheresis significantly increases the sensitivity of circulating tumor cell detection, enabling reliable identification and genomic profiling of these cells in patients with nonmetastatic breast cancer [1].\n\nReferences\n[1] Horton, J. L., Martin, O. J., Lai, L., et al. (2016). Mitochondrial protein hyperacetylation in the failing heart. JCI Insight. https://doi.org/10.1172/jci.insight.84897",
+  "truth": {
+   "claimWork": "10.1073/pnas.1313594110",
+   "refWork": "10.1172/jci.insight.84897"
+  }
+ },
+ {
+  "id": "contradicted-4",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Although subject-matter didactics and pedagogical content knowledge share core objectives, the fundamental incompatibility of their distinct theoretical traditions and research orientations inevitably hinders the development of teacher knowledge [1].\n\nReferences\n[1] Kansanen, P. (2009). Subject‐matter didactics as a central knowledge base for teachers, or should it be called pedagogical content knowledge? Pedagogy Culture and Society. https://doi.org/10.1080/14681360902742845",
+  "truth": {
+   "work": "10.1080/14681360902742845"
+  }
+ },
+ {
+  "id": "correct-5",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "The hierarchical structure of the Big Five Inventory-2, incorporating fifteen specific facet traits, provides a more reliable and predictive framework for assessing personality than its predecessor [1].\n\nReferences\n[1] Soto, C. J., & John, O. P. (2016). The next Big Five Inventory (BFI-2): Developing and assessing a hierarchical model with 15 facets to enhance bandwidth, fidelity, and predictive power.. Journal of Personality and Social Psychology. https://doi.org/10.1037/pspp0000096",
+  "truth": {
+   "work": "10.1037/pspp0000096"
+  }
+ },
+ {
+  "id": "fabricated-5",
+  "type": "fabricated",
+  "subtype": "no_doi",
+  "expected": "fabricated",
+  "text": "Integrating clinical assessments and computed tomography imaging with RT-qPCR testing significantly improves the diagnostic accuracy and management of SARS-CoV-2 infections by addressing the limitations of molecular testing alone [1].\n\nReferences\n[1] Thorne, M. V., Sterling, E. R., & Halloway, J. P. (2021). Synergistic Diagnostic Frameworks: Integrating RT-qPCR and Symptomatic Profiling in SARS-CoV-2 Clinical Management. Journal of Clinical Virology and Infectious Disease Research.",
+  "truth": {
+   "work": "10.1002/jmv.25721"
+  }
+ },
+ {
+  "id": "wrong_details-5",
+  "type": "wrong_details",
+  "subtype": "real_doi_other_title",
+  "expected": "wrong_details",
+  "text": "Adversarial perturbations can effectively bypass nonmaximum suppression in object detection systems, causing a critical surge in false positives and the complete failure of detection accuracy [1].\n\nReferences\n[1] Wang, D., Li, C., Wen, S., et al. (2021). Highly active immunomodulatory therapy ameliorates accumulation of disability in moderately advanced and advanced multiple sclerosis. IEEE Transactions on Cybernetics. https://doi.org/10.1109/tcyb.2020.3041481",
+  "truth": {
+   "work": "10.1109/tcyb.2020.3041481"
+  }
+ },
+ {
+  "id": "misused-5",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Systemic administration of an AAV-PHP.B vector effectively restores acid alpha-glucosidase expression and reverses glycogen accumulation across both the central nervous system and skeletal muscles in Pompe disease models [1].\n\nReferences\n[1] Fallgren, M., Abbas, T., Allio, S., et al. (2019). Multicast and Broadcast Enablers for High-Performing Cellular V2X Systems. IEEE Transactions on Broadcasting. https://doi.org/10.1109/tbc.2019.2912619",
+  "truth": {
+   "claimWork": "10.1016/j.omtm.2019.01.006",
+   "refWork": "10.1109/tbc.2019.2912619"
+  }
+ },
+ {
+  "id": "contradicted-5",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Children born to cohabiting parents experience equivalent health outcomes at age five to those raised by stably married parents, regardless of subsequent changes in their parents' relationship status [1].\n\nReferences\n[1] Schmeer, K. K. (2011). The Child Health Disadvantage of Parental Cohabitation. Journal of Marriage and the Family. https://doi.org/10.1111/j.1741-3737.2010.00797.x",
+  "truth": {
+   "work": "10.1111/j.1741-3737.2010.00797.x"
+  }
+ },
+ {
+  "id": "correct-6",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Peptide-based non-viral vectors offer a safe, flexible, and efficient alternative to viral systems for the targeted intracellular delivery of therapeutic nucleic acids [1].\n\nReferences\n[1] Kang, Z., Meng, Q., & Liu, K. (2019). Peptide-based gene delivery vectors. Journal of Materials Chemistry B. https://doi.org/10.1039/c8tb03124j",
+  "truth": {
+   "work": "10.1039/c8tb03124j"
+  }
+ },
+ {
+  "id": "fabricated-6",
+  "type": "fabricated",
+  "subtype": "fake_doi",
+  "expected": "fabricated",
+  "text": "Pediatric severe sepsis and septic shock result in significantly higher case-fatality rates in developing countries compared to developed nations [1].\n\nReferences\n[1] Moretti, E. V., Thorne, J. K., & Gupta, S. R. (2018). Temporal Trends and Regional Disparities in Pediatric Sepsis Mortality: A Global Meta-Analysis of Case-Fatality Rates. Journal of International Pediatric Critical Care Medicine. https://doi.org/10.1001/0c632d4e86",
+  "truth": {
+   "work": "10.1001/jamapediatrics.2018.4839"
+  }
+ },
+ {
+  "id": "wrong_details-6",
+  "type": "wrong_details",
+  "subtype": "wrong_year",
+  "expected": "wrong_details",
+  "text": "Distilled lavender and lavandin straws serve as valuable lignocellulosic feedstocks for the sustainable production of high-value biochemicals, antioxidants, and industrial fungal enzymes [1].\n\nReferences\n[1] Lesage‐Meessen, L., Bou, M., Giniès, C., et al. (2021). Lavender- and lavandin-distilled straws: an untapped feedstock with great potential for the production of high-added value compounds and fungal enzymes. Biotechnology for Biofuels. https://doi.org/10.1186/s13068-018-1218-5",
+  "truth": {
+   "work": "10.1186/s13068-018-1218-5"
+  }
+ },
+ {
+  "id": "misused-6",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Inhibiting intrinsic apoptosis pathways effectively mitigates lung damage and disease severity caused by highly pathogenic coronaviruses [1].\n\nReferences\n[1] Xu, M., Sebastianelli, F., Bačić, Z., et al. (2008). H 2 , HD, and D2 inside C60: Coupled translation-rotation eigenstates of the endohedral molecules from quantum five-dimensional calculations. The Journal of Chemical Physics. https://doi.org/10.1063/1.2967858",
+  "truth": {
+   "claimWork": "10.1126/sciadv.abf8577",
+   "refWork": "10.1063/1.2967858"
+  }
+ },
+ {
+  "id": "contradicted-6",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Macroprudential interventions exacerbate aggregate demand externalities by failing to account for how private agents’ financial decisions optimally distribute wealth and output [1].\n\nReferences\n[1] Farhi, E., & Werning, I. (2016). A Theory of Macroprudential Policies in the Presence of Nominal Rigidities. Econometrica. https://doi.org/10.3982/ecta11883",
+  "truth": {
+   "work": "10.3982/ecta11883"
+  }
+ },
+ {
+  "id": "correct-7",
+  "type": "correct",
+  "subtype": "no_doi",
+  "expected": "ok",
+  "text": "Prostate cancer patients harbor a population of tumor antigen-specific CD8+ regulatory T cells that suppress anti-tumor immune responses through an IL-35-dependent mechanism reversible by CTLA-4 blockade [1].\n\nReferences\n[1] Olson, B. M., Jankowska−Gan, E., Becker, J. T., et al. (2012). Human Prostate Tumor Antigen–Specific CD8+ Regulatory T Cells Are Inhibited by CTLA-4 or IL-35 Blockade. The Journal of Immunology.",
+  "truth": {
+   "work": "10.4049/jimmunol.1201744"
+  }
+ },
+ {
+  "id": "fabricated-7",
+  "type": "fabricated",
+  "subtype": "no_doi",
+  "expected": "fabricated",
+  "text": "Interactive data visualization tools effectively increase public concern and certainty regarding climate change regardless of an individual's geographic proximity to the projected impacts [1].\n\nReferences\n[1] Sterling, E. V., & Thorne, M. J. (2016). Bridging the Perception Gap: Evaluating Interactive Geospatial Dashboards for Localized Climate Risk Communication. Journal of Environmental Informatics and Digital Engagement.",
+  "truth": {
+   "work": "10.1080/17524032.2016.1176946"
+  }
+ },
+ {
+  "id": "wrong_details-7",
+  "type": "wrong_details",
+  "subtype": "wrong_author",
+  "expected": "wrong_details",
+  "text": "Additive manufacturing encompasses a diverse range of technologies that enable the precise fabrication of complex polymer, metal, and ceramic components for specialized dental applications [1].\n\nReferences\n[1] Scheer, J., Kois, J. C., Revilla‐León, M., et al. (2022). Additive Manufacturing Technologies: Current Status and Future Perspectives. Journal of Prosthodontics. https://doi.org/10.1111/jopr.13477",
+  "truth": {
+   "work": "10.1111/jopr.13477"
+  }
+ },
+ {
+  "id": "misused-7",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Thrombospondin-2 protects against viral myocarditis by promoting the activation of regulatory T-cells, thereby reducing cardiac inflammation and preserving systolic function [1].\n\nReferences\n[1] Sultan, N. A., & Bunt‐Kokhuis, S. V. D. (2012). Organisational culture and cloud computing: coping with a disruptive innovation. Technology Analysis and Strategic Management.",
+  "truth": {
+   "claimWork": "10.1093/cvr/cvs077",
+   "refWork": "10.1080/09537325.2012.647644"
+  }
+ },
+ {
+  "id": "contradicted-7",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Cattle sperm exhibit distinct hypermethylation patterns across megabase centromeric satellite clusters, partially methylated domains, and specific genes associated with spermatogenesis compared to somatic tissues [1].\n\nReferences\n[1] Zhou, Y., Connor, E. E., Bickhart, D. M., et al. (2018). Comparative whole genome DNA methylation profiling of cattle sperm and somatic tissues reveals striking hypomethylated patterns in sperm. GigaScience.",
+  "truth": {
+   "work": "10.1093/gigascience/giy039"
+  }
+ },
+ {
+  "id": "correct-8",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Traditional experience machine thought experiments are fundamentally flawed by status quo bias, and a more neutral alternative reveals that such scenarios fail to provide conclusive evidence regarding internalist well-being theories [1].\n\nReferences\n[1] Weijers, D. (2013). Nozick's experience machine is dead, long live the experience machine! Philosophical Psychology. https://doi.org/10.1080/09515089.2012.757889",
+  "truth": {
+   "work": "10.1080/09515089.2012.757889"
+  }
+ },
+ {
+  "id": "wrong_details-8",
+  "type": "wrong_details",
+  "subtype": "real_doi_other_title",
+  "expected": "wrong_details",
+  "text": "Pulsed-plasma jet actuators effectively mitigate the adverse effects of shock wave/boundary-layer interactions by providing high-bandwidth active control without the need for moving mechanical components [1].\n\nReferences\n[1] Narayanaswamy, V., Raja, L. L., & Clemens, N. T. (2012). Evaluation of Molecular Epidemiology, Clinical Characteristics, Antifungal Susceptibility Profiles, and Molecular Mechanisms of Antifungal Resistance of Iranian Candida parapsilosis Species Complex Blood Isolates. AIAA Journal. https://doi.org/10.2514/1.j051246",
+  "truth": {
+   "work": "10.2514/1.j051246"
+  }
+ },
+ {
+  "id": "misused-8",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Host species identity and soil phosphorus levels significantly influence the composition and distribution of ectomycorrhizal fungal communities associated with co-occurring oak species [1].\n\nReferences\n[1] Sultan, N. A., & Bunt‐Kokhuis, S. V. D. (2012). Organisational culture and cloud computing: coping with a disruptive innovation. Technology Analysis and Strategic Management. https://doi.org/10.1080/09537325.2012.647644",
+  "truth": {
+   "claimWork": "10.1111/j.1469-8137.2007.02348.x",
+   "refWork": "10.1080/09537325.2012.647644"
+  }
+ },
+ {
+  "id": "contradicted-8",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Chiral nematic liquid crystals prove fundamentally unsuitable as experimental platforms for observing and analyzing complex topological solitons, as they fail to support the knotted structures and defect configurations analogous to those in particle physics [1].\n\nReferences\n[1] Wu, J., & Smalyukh, I. I. (2022). Hopfions, heliknotons, skyrmions, torons and both abelian and nonabelian vortices in chiral liquid crystals. Liquid Crystals Reviews. https://doi.org/10.1080/21680396.2022.2040058",
+  "truth": {
+   "work": "10.1080/21680396.2022.2040058"
+  }
+ },
+ {
+  "id": "correct-9",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Diagnostic leukapheresis significantly increases the sensitivity of circulating tumor cell detection, enabling reliable identification and genomic profiling of these cells in patients with nonmetastatic breast cancer [1].\n\nReferences\n[1] Fischer, J., Niederacher, D., Topp, S. A., et al. (2013). Diagnostic leukapheresis enables reliable detection of circulating tumor cells of nonmetastatic cancer patients. Proceedings of the National Academy of Sciences. https://doi.org/10.1073/pnas.1313594110",
+  "truth": {
+   "work": "10.1073/pnas.1313594110"
+  }
+ },
+ {
+  "id": "fabricated-9",
+  "type": "fabricated",
+  "subtype": "no_doi",
+  "expected": "fabricated",
+  "text": "While subject-matter didactics and pedagogical content knowledge share core objectives, integrating their distinct theoretical traditions and research orientations could significantly advance the development of teacher knowledge [1].\n\nReferences\n[1] Halloway, E. V., & Thorne, M. T. (2008). Bridging the Divide: Reconceptualizing Subject-Matter Didactics and Pedagogical Content Knowledge in Teacher Education. Journal of Educational Theory and Instructional Practice.",
+  "truth": {
+   "work": "10.1080/14681360902742845"
+  }
+ },
+ {
+  "id": "wrong_details-9",
+  "type": "wrong_details",
+  "subtype": "wrong_year",
+  "expected": "wrong_details",
+  "text": "Endoscopic submucosal dissection provides superior oncological outcomes and higher recurrence-free survival rates compared to endoscopic mucosal resection for the treatment of superficial esophageal squamous cell carcinoma [1].\n\nReferences\n[1] Berger, A., Rahmi, G., Perrod, G., et al. (2014). Long-term follow-up after endoscopic resection for superficial esophageal squamous cell carcinoma: a multicenter Western study. Endoscopy.",
+  "truth": {
+   "work": "10.1055/a-0732-5317"
+  }
+ },
+ {
+  "id": "misused-9",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "The presence of erionite in North Dakota road gravel poses a significant long-term health risk, necessitating the implementation of preventive measures to mitigate potential future mesothelioma mortality [1].\n\nReferences\n[1] Xiao, P., Yuan, M., Zhang, X., et al. (2017). Cosegmentation for Object-Based Building Change Detection From High-Resolution Remotely Sensed Images. IEEE Transactions on Geoscience and Remote Sensing. https://doi.org/10.1109/tgrs.2016.2627638",
+  "truth": {
+   "claimWork": "10.1073/pnas.1105887108",
+   "refWork": "10.1109/tgrs.2016.2627638"
+  }
+ },
+ {
+  "id": "contradicted-9",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "The chromosome 19 microRNA cluster functions as a positive regulator of extravillous trophoblast migration by modulating specific transcripts involved in cellular movement [1].\n\nReferences\n[1] Xie, L., Mouillet, J., Chu, T., et al. (2014). C19MC MicroRNAs Regulate the Migration of Human Trophoblasts. Endocrinology. https://doi.org/10.1210/en.2014-1501",
+  "truth": {
+   "work": "10.1210/en.2014-1501"
+  }
+ },
+ {
+  "id": "correct-10",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Systemic administration of an AAV-PHP.B vector effectively restores acid alpha-glucosidase expression and reverses glycogen accumulation across both the central nervous system and skeletal muscles in Pompe disease models [1].\n\nReferences\n[1] Lim, J., Yi, H., Gao, F., et al. (2019). Intravenous Injection of an AAV-PHP.B Vector Encoding Human Acid α-Glucosidase Rescues Both Muscle and CNS Defects in Murine Pompe Disease. Molecular Therapy — Methods & Clinical Development. https://doi.org/10.1016/j.omtm.2019.01.006",
+  "truth": {
+   "work": "10.1016/j.omtm.2019.01.006"
+  }
+ },
+ {
+  "id": "fabricated-10",
+  "type": "fabricated",
+  "subtype": "fake_doi",
+  "expected": "fabricated",
+  "text": "Children born to cohabiting parents experience poorer health outcomes at age five compared to those raised by stably married parents, regardless of subsequent changes in their parents' relationship status [1].\n\nReferences\n[1] Sterling, E. V., & Thorne, M. J. (2011). Developmental Trajectories and Socioeconomic Outcomes: Reassessing the Child Health Disadvantage in Cohabiting Households. Journal of Family Demography and Public Health. https://doi.org/10.1111/a538cc03aa",
+  "truth": {
+   "work": "10.1111/j.1741-3737.2010.00797.x"
+  }
+ },
+ {
+  "id": "wrong_details-10",
+  "type": "wrong_details",
+  "subtype": "wrong_author",
+  "expected": "wrong_details",
+  "text": "The β-d-(1→4)-galactan chains within the polysaccharide structure are essential for mediating its immunomodulatory effects on the intestinal immune system [1].\n\nReferences\n[1] Zhang, S., Zhang, Y., Fu, Y., et al. (2019). A Polysaccharide Isolated from Codonopsis pilosula with Immunomodulation Effects Both In Vitro and In Vivo. Molecules.",
+  "truth": {
+   "work": "10.3390/molecules24203632"
+  }
+ },
+ {
+  "id": "misused-10",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "The implementation of nationwide skin cancer screening in Germany has failed to demonstrate a reduction in melanoma mortality rates [1].\n\nReferences\n[1] Fuxé, K., Fredholm, B. B., Agnati, L., et al. (2008). Interaction of Ergot Drugs with Central Monoamine Systems. Pharmacology. https://doi.org/10.1159/000136813",
+  "truth": {
+   "claimWork": "10.1002/cncr.29755",
+   "refWork": "10.1159/000136813"
+  }
+ },
+ {
+  "id": "contradicted-10",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "The intrinsically disordered N-terminal transactivation domain of p53 diminishes target gene selectivity by transiently interacting with the DNA-binding domain to promote nonspecific DNA binding [1].\n\nReferences\n[1] Krois, A. S., Dyson, H. J., & Wright, P. E. (2018). Long-range regulation of p53 DNA binding by its intrinsically disordered N-terminal transactivation domain. Proceedings of the National Academy of Sciences. https://doi.org/10.1073/pnas.1814051115",
+  "truth": {
+   "work": "10.1073/pnas.1814051115"
+  }
+ },
+ {
+  "id": "correct-11",
+  "type": "correct",
+  "subtype": "no_doi",
+  "expected": "ok",
+  "text": "Inhibiting intrinsic apoptosis pathways effectively mitigates lung damage and disease severity caused by highly pathogenic coronaviruses [1].\n\nReferences\n[1] Chu, H., Shuai, H., Hou, Y., et al. (2021). Targeting highly pathogenic coronavirus-induced apoptosis reduces viral pathogenesis and disease severity. Science Advances.",
+  "truth": {
+   "work": "10.1126/sciadv.abf8577"
+  }
+ },
+ {
+  "id": "fabricated-11",
+  "type": "fabricated",
+  "subtype": "no_doi",
+  "expected": "fabricated",
+  "text": "Macroprudential interventions can mitigate aggregate demand externalities by correcting for the failure of private agents to internalize how their financial decisions influence the distribution of wealth and output [1].\n\nReferences\n[1] Sterling, J. V., & Rossi, E. M. (2017). Nominal Rigidities and the Optimal Design of Macroprudential Frameworks. Journal of Monetary Economics and Financial Stability.",
+  "truth": {
+   "work": "10.3982/ecta11883"
+  }
+ },
+ {
+  "id": "wrong_details-11",
+  "type": "wrong_details",
+  "subtype": "real_doi_other_title",
+  "expected": "wrong_details",
+  "text": "A framework based on the additivity of coherence for subspace-independent states provides a more flexible and universally applicable method for quantifying coherence across diverse physical contexts [1].\n\nReferences\n[1] Yu, X., Zhang, D., Xu, G., et al. (2016). Failed Bridges: Case Studies, Causes and Consequences. Physical Review A. https://doi.org/10.1103/physreva.94.060302",
+  "truth": {
+   "work": "10.1103/physreva.94.060302"
+  }
+ },
+ {
+  "id": "misused-11",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "The SID-1 protein facilitates the transport of double-stranded RNA through a size-independent, diffusion-limited mechanism that likely involves the formation of functional multimers [1].\n\nReferences\n[1] Sultan, N. A., & Bunt‐Kokhuis, S. V. D. (2012). Organisational culture and cloud computing: coping with a disruptive innovation. Technology Analysis and Strategic Management.",
+  "truth": {
+   "claimWork": "10.1261/rna.1286409",
+   "refWork": "10.1080/09537325.2012.647644"
+  }
+ },
+ {
+  "id": "contradicted-11",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "The synergistic interaction between land use and climate change increasingly bolsters freshwater resilience, validating management strategies that leverage human-driven alterations to the global water cycle [1].\n\nReferences\n[1] Kaushal, S. S., Gold, A. J., & Mayer, P. M. (2017). Land Use, Climate, and Water Resources—Global Stages of Interaction. Water.",
+  "truth": {
+   "work": "10.3390/w9100815"
+  }
+ },
+ {
+  "id": "correct-12",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Thrombospondin-2 protects against viral myocarditis by promoting the activation of regulatory T-cells, thereby reducing cardiac inflammation and preserving systolic function [1].\n\nReferences\n[1] Papageorgiou, A., Swinnen, M., Vanhoutte, D., et al. (2012). Thrombospondin-2 prevents cardiac injury and dysfunction in viral myocarditis through the activation of regulatory T-cells. Cardiovascular Research. https://doi.org/10.1093/cvr/cvs077",
+  "truth": {
+   "work": "10.1093/cvr/cvs077"
+  }
+ },
+ {
+  "id": "fabricated-12",
+  "type": "fabricated",
+  "subtype": "fake_doi",
+  "expected": "fabricated",
+  "text": "Cattle sperm exhibit distinct hypomethylation patterns across megabase centromeric satellite clusters, partially methylated domains, and specific genes associated with spermatogenesis compared to somatic tissues [1].\n\nReferences\n[1] Thorne, M. V., Sterling, E. R., & Vance, J. P. (2017). Epigenetic Landscapes: Comparative Whole Genome Methylation Profiling in Bovine Germline and Somatic Tissues. Journal of Mammalian Genomics and Epigenetics. https://doi.org/10.1093/056da5590e",
+  "truth": {
+   "work": "10.1093/gigascience/giy039"
+  }
+ },
+ {
+  "id": "wrong_details-12",
+  "type": "wrong_details",
+  "subtype": "wrong_year",
+  "expected": "wrong_details",
+  "text": "Higher efficacy immunomodulatory therapy significantly reduces the risk of further disability accumulation in patients with moderately advanced and advanced relapse-onset multiple sclerosis [1].\n\nReferences\n[1] Lizak, N., Lugaresi, A., Alroughani, R., et al. (2019). Highly active immunomodulatory therapy ameliorates accumulation of disability in moderately advanced and advanced multiple sclerosis. Journal of Neurology Neurosurgery & Psychiatry. https://doi.org/10.1136/jnnp-2016-313976",
+  "truth": {
+   "work": "10.1136/jnnp-2016-313976"
+  }
+ },
+ {
+  "id": "misused-12",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Integrating learning and forgetting curves into probabilistic matrix factorization allows for more accurate tracking and interpretation of how students' knowledge proficiency evolves over time [1].\n\nReferences\n[1] Jee, S. H., Kim, M., Kim, M. K., et al. (2018). Metabolomics Profiles of Hepatocellular Carcinoma in a Korean Prospective Cohort: The Korean Cancer Prevention Study-II. Cancer Prevention Research. https://doi.org/10.1158/1940-6207.capr-17-0249",
+  "truth": {
+   "claimWork": "10.1145/3379507",
+   "refWork": "10.1158/1940-6207.capr-17-0249"
+  }
+ },
+ {
+  "id": "contradicted-12",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Blockchain technology undermines medical research by complicating consent processes and stripping patients of control over their data while simultaneously hindering research efficiency and equity [1].\n\nReferences\n[1] Mann, S. P., Savulescu, J., Ravaud, P., et al. (2020). Blockchain, consent and prosent for medical research. Journal of Medical Ethics. https://doi.org/10.1136/medethics-2019-105963",
+  "truth": {
+   "work": "10.1136/medethics-2019-105963"
+  }
+ },
+ {
+  "id": "correct-13",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Host species identity and soil phosphorus levels significantly influence the composition and distribution of ectomycorrhizal fungal communities associated with co-occurring oak species [1].\n\nReferences\n[1] Morris, M. H., Smith, M. E., Rizzo, D. M., et al. (2008). Contrasting ectomycorrhizal fungal communities on the roots of co‐occurring oaks (Quercus spp.) in a California woodland. New Phytologist. https://doi.org/10.1111/j.1469-8137.2007.02348.x",
+  "truth": {
+   "work": "10.1111/j.1469-8137.2007.02348.x"
+  }
+ },
+ {
+  "id": "fabricated-13",
+  "type": "fabricated",
+  "subtype": "no_doi",
+  "expected": "fabricated",
+  "text": "Chiral nematic liquid crystals serve as versatile experimental platforms for observing and analyzing complex topological solitons, including knotted structures and various defect configurations analogous to those in particle physics [1].\n\nReferences\n[1] Moretti, E. V., Thorne, J. K., & Nakamura, S. H. (2022). Topological Soliton Dynamics in Chiral Nematic Liquid Crystals: From Hopfions to Non-Abelian Vortices. Journal of Advanced Soft Matter Physics.",
+  "truth": {
+   "work": "10.1080/21680396.2022.2040058"
+  }
+ },
+ {
+  "id": "wrong_details-13",
+  "type": "wrong_details",
+  "subtype": "wrong_author",
+  "expected": "wrong_details",
+  "text": "Prenatal exposure to opioids and polysubstances is associated with persistent and worsening cognitive deficits in children that do not diminish over time, even in stable postnatal environments [1].\n\nReferences\n[1] Farage, M. A., Moe, V., Slinning, K., et al. (2015). Longitudinal cognitive development of children born to mothers with opioid and polysubstance use. Pediatric Research. https://doi.org/10.1038/pr.2015.95",
+  "truth": {
+   "work": "10.1038/pr.2015.95"
+  }
+ },
+ {
+  "id": "misused-13",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Utilizing the short-time Fourier transform magnitude enables unique signal recovery and enhances performance for sparse inputs compared to traditional oversampled Fourier measurements [1].\n\nReferences\n[1] Sultan, N. A., & Bunt‐Kokhuis, S. V. D. (2012). Organisational culture and cloud computing: coping with a disruptive innovation. Technology Analysis and Strategic Management. https://doi.org/10.1080/09537325.2012.647644",
+  "truth": {
+   "claimWork": "10.1109/lsp.2014.2364225",
+   "refWork": "10.1080/09537325.2012.647644"
+  }
+ },
+ {
+  "id": "contradicted-13",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Midkine expression induced by replication stress suppresses Notch-2 signaling to inhibit epithelial-mesenchymal transition and diminish chemoresistance in pancreatic ductal adenocarcinoma cells [1].\n\nReferences\n[1] Güngör, C., Zander, H., Effenberger, K. E., et al. (2011). Notch Signaling Activated by Replication Stress–Induced Expression of Midkine Drives Epithelial–Mesenchymal Transition and Chemoresistance in Pancreatic Cancer. Cancer Research. https://doi.org/10.1158/0008-5472.can-11-0036",
+  "truth": {
+   "work": "10.1158/0008-5472.can-11-0036"
+  }
+ },
+ {
+  "id": "correct-14",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "The presence of erionite in North Dakota road gravel poses a significant long-term health risk, necessitating the implementation of preventive measures to mitigate potential future mesothelioma mortality [1].\n\nReferences\n[1] Carbone, M., Baris, Y. I., Bertino, P., et al. (2011). Erionite exposure in North Dakota and Turkish villages with mesothelioma. Proceedings of the National Academy of Sciences. https://doi.org/10.1073/pnas.1105887108",
+  "truth": {
+   "work": "10.1073/pnas.1105887108"
+  }
+ },
+ {
+  "id": "fabricated-14",
+  "type": "fabricated",
+  "subtype": "fake_doi",
+  "expected": "fabricated",
+  "text": "The chromosome 19 microRNA cluster functions as a negative regulator of extravillous trophoblast migration by modulating specific transcripts involved in cellular movement [1].\n\nReferences\n[1] Moretti, E. V., Sterling, J. R., & Thorne, M. T. (2015). Epigenetic Modulation of C19MC MicroRNA Clusters in Human Trophoblast Migration and Invasion. Journal of Reproductive Molecular Biology. https://doi.org/10.1210/89a11d2b4a",
+  "truth": {
+   "work": "10.1210/en.2014-1501"
+  }
+ },
+ {
+  "id": "wrong_details-14",
+  "type": "wrong_details",
+  "subtype": "real_doi_other_title",
+  "expected": "wrong_details",
+  "text": "Integrating pharmaceutical clustering with a mixed-integer linear programming model optimizes supply chain costs and service levels while significantly reducing computational complexity during healthcare emergencies [1].\n\nReferences\n[1] Kochakkashani, F., Kayvanfar, V., & Haji, A. (2023). Cell surface binding, uptaking and anticancer activity of L-K6, a lysine/leucine-rich peptide, on human breast cancer MCF-7 cells. Socio-Economic Planning Sciences. https://doi.org/10.1016/j.seps.2023.101602",
+  "truth": {
+   "work": "10.1016/j.seps.2023.101602"
+  }
+ },
+ {
+  "id": "misused-14",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Exogenous hydrogen sulfide mitigates chromium toxicity in cauliflower by restricting metal uptake and bolstering the plant's antioxidative defense mechanisms [1].\n\nReferences\n[1] Sharma, S., & McAuley, J. H. (2022). Low Back Pain in Low- and Middle-Income Countries, Part 1: The Problem. Journal of Orthopaedic and Sports Physical Therapy. https://doi.org/10.2519/jospt.2022.11145",
+  "truth": {
+   "claimWork": "10.1111/ppl.13001",
+   "refWork": "10.2519/jospt.2022.11145"
+  }
+ },
+ {
+  "id": "contradicted-14",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Albumin infusion fails to reduce the incidence of paracentesis-induced circulatory dysfunction and provides no survival benefit for patients with acute-on-chronic liver failure undergoing modest-volume paracentesis [1].\n\nReferences\n[1] Arora, V., Vijayaraghavan, R., Maiwall, R., et al. (2019). Paracentesis‐Induced Circulatory Dysfunction With Modest‐Volume Paracentesis Is Partly Ameliorated by Albumin Infusion in Acute‐on‐Chronic Liver Failure. Hepatology. https://doi.org/10.1002/hep.31071",
+  "truth": {
+   "work": "10.1002/hep.31071"
+  }
+ },
+ {
+  "id": "correct-15",
+  "type": "correct",
+  "subtype": "no_doi",
+  "expected": "ok",
+  "text": "The implementation of nationwide skin cancer screening in Germany has failed to demonstrate a reduction in melanoma mortality rates [1].\n\nReferences\n[1] Stang, A., & Jöckel, K. (2015). Does skin cancer screening save lives? A detailed analysis of mortality time trends in Schleswig‐Holstein and Germany. Cancer.",
+  "truth": {
+   "work": "10.1002/cncr.29755"
+  }
+ },
+ {
+  "id": "fabricated-15",
+  "type": "fabricated",
+  "subtype": "no_doi",
+  "expected": "fabricated",
+  "text": "The intrinsically disordered N-terminal transactivation domain of p53 enhances target gene selectivity by transiently interacting with the DNA-binding domain to inhibit nonspecific DNA binding [1].\n\nReferences\n[1] Moretti, E. V., Sterling, J. K., & Thorne, M. H. (2017). Allosteric modulation of p53 DNA-binding kinetics via N-terminal disordered domain dynamics. Journal of Molecular Structural Biology.",
+  "truth": {
+   "work": "10.1073/pnas.1814051115"
+  }
+ },
+ {
+  "id": "wrong_details-15",
+  "type": "wrong_details",
+  "subtype": "wrong_year",
+  "expected": "wrong_details",
+  "text": "While antifungal resistance remains rare among Iranian Candida parapsilosis blood isolates, the emergence of multidrug-resistant strains poses a significant threat to the efficacy of future clinical antifungal therapies [1].\n\nReferences\n[1] Arastehfar, A. A., Daneshnia, F., Najafzadeh, M. J., et al. (2016). Evaluation of Molecular Epidemiology, Clinical Characteristics, Antifungal Susceptibility Profiles, and Molecular Mechanisms of Antifungal Resistance of Iranian Candida parapsilosis Species Complex Blood Isolates. Frontiers in Cellular and Infection Microbiology.",
+  "truth": {
+   "work": "10.3389/fcimb.2020.00206"
+  }
+ },
+ {
+  "id": "misused-15",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Integrating lumped reactive components into metallic patches enables significant miniaturization of frequency selective surfaces while maintaining resonant frequency control that remains largely independent of unit cell periodicity [1].\n\nReferences\n[1] Cheng, D., Valente, S., Castellano, S., et al. (2011). Novel 3,5-Bis(bromohydroxybenzylidene)piperidin-4-ones as Coactivator-Associated Arginine Methyltransferase 1 Inhibitors: Enzyme Selectivity and Cellular Activity. Journal of Medicinal Chemistry.",
+  "truth": {
+   "claimWork": "10.1109/tap.2009.2027174",
+   "refWork": "10.1021/jm200453n"
+  }
+ },
+ {
+  "id": "contradicted-15",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Chitosan-silver nanocomposites fail to inhibit biofilm-forming microbes while exhibiting significant cytotoxicity toward mammalian cells, rendering them an unsuitable approach for managing pathogenic infections [1].\n\nReferences\n[1] Regiel-Futyra, A., Kus‐Liśkiewicz, M., Sebastián, V., et al. (2017). Development of noncytotoxic silver–chitosan nanocomposites for efficient control of biofilm forming microbes. RSC Advances.",
+  "truth": {
+   "work": "10.1039/c7ra08359a"
+  }
+ },
+ {
+  "id": "correct-16",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "The SID-1 protein facilitates the transport of double-stranded RNA through a size-independent, diffusion-limited mechanism that likely involves the formation of functional multimers [1].\n\nReferences\n[1] Shih, J. D., Fitzgerald, M. C., Sutherlin, M. E., et al. (2009). The SID-1 double-stranded RNA transporter is not selective for dsRNA length. RNA. https://doi.org/10.1261/rna.1286409",
+  "truth": {
+   "work": "10.1261/rna.1286409"
+  }
+ },
+ {
+  "id": "fabricated-16",
+  "type": "fabricated",
+  "subtype": "fake_doi",
+  "expected": "fabricated",
+  "text": "The escalating interaction between land use and climate change progressively degrades freshwater resources, necessitating adaptive management strategies that account for human-driven alterations to the global water cycle [1].\n\nReferences\n[1] Sterling, E. V., Thorne, M. J., & Al-Farsi, A. K. (2017). Hydrological Feedback Loops in Anthropogenic Land-Cover Transitions: A Multi-Decadal Global Analysis. Journal of Earth Systems and Resource Dynamics. https://doi.org/10.3390/48e112a086",
+  "truth": {
+   "work": "10.3390/w9100815"
+  }
+ },
+ {
+  "id": "wrong_details-16",
+  "type": "wrong_details",
+  "subtype": "wrong_author",
+  "expected": "wrong_details",
+  "text": "Systematic analysis of bridge failures reveals that examining past structural errors and their underlying causes is essential for advancing engineering safety and fostering innovation [1].\n\nReferences\n[1] Ploeg, M. (2010). Failed Bridges: Case Studies, Causes and Consequences.",
+  "truth": {
+   "work": "10.1002/9783433600634"
+  }
+ },
+ {
+  "id": "misused-16",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "C-type cytochromes function as the primary electron reservoirs in electroactive biofilms, with specific variants acting as kinetic bottlenecks that limit the overall rate of electron transfer [1].\n\nReferences\n[1] Sharma, S., & McAuley, J. H. (2022). Low Back Pain in Low- and Middle-Income Countries, Part 1: The Problem. Journal of Orthopaedic and Sports Physical Therapy. https://doi.org/10.2519/jospt.2022.11145",
+  "truth": {
+   "claimWork": "10.1002/cphc.201100246",
+   "refWork": "10.2519/jospt.2022.11145"
+  }
+ },
+ {
+  "id": "contradicted-16",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Integrating multiscale geographically weighted regression with area-to-point kriging fails to improve the spatial resolution or accuracy of land surface temperature mapping across diverse urban landscapes [1].\n\nReferences\n[1] Yang, C., Zhan, Q., Lv, Y., et al. (2019). Downscaling Land Surface Temperature Using Multiscale Geographically Weighted Regression Over Heterogeneous Landscapes in Wuhan, China. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing. https://doi.org/10.1109/jstars.2019.2955551",
+  "truth": {
+   "work": "10.1109/jstars.2019.2955551"
+  }
+ },
+ {
+  "id": "correct-17",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Integrating learning and forgetting curves into probabilistic matrix factorization allows for more accurate tracking and interpretation of how students' knowledge proficiency evolves over time [1].\n\nReferences\n[1] Huang, Z., Liu, Q., Chen, Y., et al. (2020). Learning or Forgetting? A Dynamic Approach for Tracking the Knowledge Proficiency of Students. ACM Transactions on Information Systems. https://doi.org/10.1145/3379507",
+  "truth": {
+   "work": "10.1145/3379507"
+  }
+ },
+ {
+  "id": "fabricated-17",
+  "type": "fabricated",
+  "subtype": "no_doi",
+  "expected": "fabricated",
+  "text": "Blockchain technology enhances medical research by automating consent processes and empowering patients with greater control over their data while simultaneously improving research efficiency and equity [1].\n\nReferences\n[1] Sterling, E. V., Thorne, M., & Vance, J. H. (2021). Decentralized Consent Architectures: Integrating Smart Contracts into Longitudinal Medical Research Frameworks. Journal of Biomedical Informatics and Distributed Ledger Technology.",
+  "truth": {
+   "work": "10.1136/medethics-2019-105963"
+  }
+ },
+ {
+  "id": "wrong_details-17",
+  "type": "wrong_details",
+  "subtype": "real_doi_other_title",
+  "expected": "wrong_details",
+  "text": "Infrared excess fractions in the Sco-Cen association are significantly lower for B-type stars compared to their A- and F-type counterparts [1].\n\nReferences\n[1] Rizzuto, A. C., Ireland, M., & Zucker, D. B. (2012). Sensitive skin: closing in on a physiological cause. Monthly Notices of the Royal Astronomical Society Letters. https://doi.org/10.1111/j.1745-3933.2012.01214.x",
+  "truth": {
+   "work": "10.1111/j.1745-3933.2012.01214.x"
+  }
+ },
+ {
+  "id": "misused-17",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Humans prioritize warmth over competence in social evaluation because the evolutionary history of cooperative partner choice rendered warmth a more reliable predictor of future relationship benefits [1].\n\nReferences\n[1] Sharma, S., & McAuley, J. H. (2022). Low Back Pain in Low- and Middle-Income Countries, Part 1: The Problem. Journal of Orthopaedic and Sports Physical Therapy. https://doi.org/10.2519/jospt.2022.11145",
+  "truth": {
+   "claimWork": "10.1177/17456916211071087",
+   "refWork": "10.2519/jospt.2022.11145"
+  }
+ },
+ {
+  "id": "contradicted-17",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "The integration of a polytetrafluoroethylene layer beneath graphene significantly diminishes power generation from moving water droplets by suppressing triboelectrification and reducing pseudocapacitance [1].\n\nReferences\n[1] Kwak, S. S., Lin, S., Lee, J. H., et al. (2016). Triboelectrification-Induced Large Electric Power Generation from a Single Moving Droplet on Graphene/Polytetrafluoroethylene. ACS Nano. https://doi.org/10.1021/acsnano.6b03032",
+  "truth": {
+   "work": "10.1021/acsnano.6b03032"
+  }
+ },
+ {
+  "id": "correct-18",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Utilizing the short-time Fourier transform magnitude enables unique signal recovery and enhances performance for sparse inputs compared to traditional oversampled Fourier measurements [1].\n\nReferences\n[1] Eldar, Y. C., Sidorenko, P., Mixon, D. G., et al. (2014). Sparse Phase Retrieval from Short-Time Fourier Measurements. IEEE Signal Processing Letters. https://doi.org/10.1109/lsp.2014.2364225",
+  "truth": {
+   "work": "10.1109/lsp.2014.2364225"
+  }
+ },
+ {
+  "id": "fabricated-18",
+  "type": "fabricated",
+  "subtype": "fake_doi",
+  "expected": "fabricated",
+  "text": "Midkine expression induced by replication stress activates Notch-2 signaling to promote epithelial-mesenchymal transition and enhance chemoresistance in pancreatic ductal adenocarcinoma cells [1].\n\nReferences\n[1] Moretti, E. V., Sterling, J. R., & Halloway, M. T. (2010). Replication Stress-Mediated Midkine Upregulation Orchestrates Notch-Dependent EMT and Therapeutic Resistance in Pancreatic Ductal Adenocarcinoma. Journal of Molecular Oncology and Cellular Signaling. https://doi.org/10.1158/c41ff0d169",
+  "truth": {
+   "work": "10.1158/0008-5472.can-11-0036"
+  }
+ },
+ {
+  "id": "wrong_details-18",
+  "type": "wrong_details",
+  "subtype": "wrong_year",
+  "expected": "wrong_details",
+  "text": "A flexible distributed optimization framework can achieve competitive convergence rates while allowing for the seamless integration of diverse, high-performance local solvers [1].\n\nReferences\n[1] Ma, C., Konečný, J., Jaggi, M., et al. (2020). Distributed optimization with arbitrary local solvers. Optimization methods & software. https://doi.org/10.1080/10556788.2016.1278445",
+  "truth": {
+   "work": "10.1080/10556788.2016.1278445"
+  }
+ },
+ {
+  "id": "misused-18",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Advanced beamforming techniques and optimized network architectures significantly enhance the efficiency and reliability of multicast and broadcast transmissions for connected vehicle communications [1].\n\nReferences\n[1] Jee, S. H., Kim, M., Kim, M. K., et al. (2018). Metabolomics Profiles of Hepatocellular Carcinoma in a Korean Prospective Cohort: The Korean Cancer Prevention Study-II. Cancer Prevention Research. https://doi.org/10.1158/1940-6207.capr-17-0249",
+  "truth": {
+   "claimWork": "10.1109/tbc.2019.2912619",
+   "refWork": "10.1158/1940-6207.capr-17-0249"
+  }
+ },
+ {
+  "id": "contradicted-18",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Genetic susceptibility to familial melanoma is rarely linked to broader cancer risks, suggesting that these identified genes function exclusively as tissue-specific regulators rather than general tumor suppressors or oncogenes [1].\n\nReferences\n[1] Aoude, L. G., Wadt, K., Pritchard, A. L., et al. (2014). Genetics of familial melanoma: 20 years after CDKN 2 A. Pigment Cell & Melanoma Research. https://doi.org/10.1111/pcmr.12333",
+  "truth": {
+   "work": "10.1111/pcmr.12333"
+  }
+ },
+ {
+  "id": "correct-19",
+  "type": "correct",
+  "subtype": "no_doi",
+  "expected": "ok",
+  "text": "Exogenous hydrogen sulfide mitigates chromium toxicity in cauliflower by restricting metal uptake and bolstering the plant's antioxidative defense mechanisms [1].\n\nReferences\n[1] Ahmad, R., Ali, S., Rizwan, M., et al. (2019). Hydrogen sulfide alleviates chromium stress on cauliflower by restricting its uptake and enhancing antioxidative system. Physiologia Plantarum.",
+  "truth": {
+   "work": "10.1111/ppl.13001"
+  }
+ },
+ {
+  "id": "fabricated-19",
+  "type": "fabricated",
+  "subtype": "no_doi",
+  "expected": "fabricated",
+  "text": "Albumin infusion significantly reduces the incidence of paracentesis-induced circulatory dysfunction and improves survival in patients with acute-on-chronic liver failure undergoing modest-volume paracentesis [1].\n\nReferences\n[1] Thorne, M. V., Sterling, E. R., & Vance, J. K. (2019). Hemodynamic Stability and Albumin Supplementation in Low-Volume Paracentesis for Acute-on-Chronic Liver Failure. Journal of Hepatology and Clinical Gastroenterology.",
+  "truth": {
+   "work": "10.1002/hep.31071"
+  }
+ },
+ {
+  "id": "wrong_details-19",
+  "type": "wrong_details",
+  "subtype": "wrong_author",
+  "expected": "wrong_details",
+  "text": "Inducing nonhomogeneous lattice strain and structural distortion in ultrathin palladium-rich alloy nanowires significantly enhances their catalytic activity for the electrochemical oxidation of biomass-derived alcohols [1].\n\nReferences\n[1] Leen, J. B., Liu, K., Liu, Z., et al. (2021). Highly Strained Au–Ag–Pd Alloy Nanowires for Boosted Electrooxidation of Biomass-Derived Alcohols. Nano Letters. https://doi.org/10.1021/acs.nanolett.0c04395",
+  "truth": {
+   "work": "10.1021/acs.nanolett.0c04395"
+  }
+ },
+ {
+  "id": "misused-19",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Mitochondrial protein lysine hyperacetylation impairs the catalytic activity of succinate dehydrogenase A, thereby disrupting energy metabolism and contributing to the progression of heart failure [1].\n\nReferences\n[1] Ran, C., Carrias, A., Williams, M. A., et al. (2012). Identification of Bacillus Strains for Biological Control of Catfish Pathogens. PLoS ONE.",
+  "truth": {
+   "claimWork": "10.1172/jci.insight.84897",
+   "refWork": "10.1371/journal.pone.0045793"
+  }
+ },
+ {
+  "id": "contradicted-19",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Alternative splicing of the GluN1 subunit regulates synaptic plasticity and cognitive performance, with the presence of the N1 cassette enhancing both long-term potentiation and spatial memory [1].\n\nReferences\n[1] Sengar, A. S., Li, H., Zhang, W., et al. (2019). Control of Long-Term Synaptic Potentiation and Learning by Alternative Splicing of the NMDA Receptor Subunit GluN1. Cell Reports.",
+  "truth": {
+   "work": "10.1016/j.celrep.2019.11.087"
+  }
+ },
+ {
+  "id": "correct-20",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Integrating lumped reactive components into metallic patches enables significant miniaturization of frequency selective surfaces while maintaining resonant frequency control that remains largely independent of unit cell periodicity [1].\n\nReferences\n[1] Liu, H. L., Ford, K. L., & Langley, R. (2009). Design Methodology for a Miniaturized Frequency Selective Surface Using Lumped Reactive Components. IEEE Transactions on Antennas and Propagation. https://doi.org/10.1109/tap.2009.2027174",
+  "truth": {
+   "work": "10.1109/tap.2009.2027174"
+  }
+ },
+ {
+  "id": "fabricated-20",
+  "type": "fabricated",
+  "subtype": "fake_doi",
+  "expected": "fabricated",
+  "text": "Chitosan-silver nanocomposites effectively inhibit biofilm-forming microbes while maintaining low cytotoxicity toward mammalian cells, offering a promising approach for managing pathogenic infections [1].\n\nReferences\n[1] Moretti, E. V., Thorne, J. K., & Gupta, S. R. (2018). Synergistic Antimicrobial Efficacy and Biocompatibility of Silver-Doped Chitosan Nanoscaffolds in Biofilm Inhibition. Journal of Nanobiomaterials and Applied Microbiology. https://doi.org/10.1039/86b24f9802",
+  "truth": {
+   "work": "10.1039/c7ra08359a"
+  }
+ },
+ {
+  "id": "wrong_details-20",
+  "type": "wrong_details",
+  "subtype": "real_doi_other_title",
+  "expected": "wrong_details",
+  "text": "The lysine/leucine-rich peptide L-K6 selectively targets MCF-7 breast cancer cells by binding to surface phosphatidylserine and inducing cell death through clathrin-independent macropinocytosis and subsequent nuclear damage [1].\n\nReferences\n[1] Wang, C., Dong, S., Zhang, L., et al. (2017). Declines in Woodland Salamander Abundance Associated with Non‐Native Earthworm and Plant Invasions. Scientific Reports. https://doi.org/10.1038/s41598-017-08963-2",
+  "truth": {
+   "work": "10.1038/s41598-017-08963-2"
+  }
+ },
+ {
+  "id": "misused-20",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Integrating multitemporal image features through cosegmentation improves building change detection by ensuring spatial correspondence and eliminating inconsistencies inherent in independent segmentation strategies [1].\n\nReferences\n[1] Ran, C., Carrias, A., Williams, M. A., et al. (2012). Identification of Bacillus Strains for Biological Control of Catfish Pathogens. PLoS ONE. https://doi.org/10.1371/journal.pone.0045793",
+  "truth": {
+   "claimWork": "10.1109/tgrs.2016.2627638",
+   "refWork": "10.1371/journal.pone.0045793"
+  }
+ },
+ {
+  "id": "contradicted-20",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "The length and electronic properties of molecular bridges, combined with solvent polarity and reorganization energy, preclude any precise control over the kinetics and longevity of multi-step charge-transfer processes [1].\n\nReferences\n[1] Kaur, R., Possanza, F., Francesca, L., et al. (2020). Understanding and Controlling Short- and Long-Range Electron/Charge-Transfer Processes in Electron Donor–Acceptor Conjugates. Journal of the American Chemical Society. https://doi.org/10.1021/jacs.0c01452",
+  "truth": {
+   "work": "10.1021/jacs.0c01452"
+  }
+ },
+ {
+  "id": "correct-21",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "C-type cytochromes function as the primary electron reservoirs in electroactive biofilms, with specific variants acting as kinetic bottlenecks that limit the overall rate of electron transfer [1].\n\nReferences\n[1] Liu, Y., Kim, H., Franklin, R., et al. (2011). Linking Spectral and Electrochemical Analysis to Monitor c‐type Cytochrome Redox Status in Living Geobacter sulfurreducens Biofilms. ChemPhysChem. https://doi.org/10.1002/cphc.201100246",
+  "truth": {
+   "work": "10.1002/cphc.201100246"
+  }
+ },
+ {
+  "id": "fabricated-21",
+  "type": "fabricated",
+  "subtype": "no_doi",
+  "expected": "fabricated",
+  "text": "Integrating multiscale geographically weighted regression with area-to-point kriging significantly enhances the spatial resolution and accuracy of land surface temperature mapping across diverse urban landscapes [1].\n\nReferences\n[1] Zhang, J., Chen, M., & Liu, H. (2018). Spatiotemporal Downscaling of MODIS Land Surface Temperature via Multiscale Geographically Weighted Regression in Complex Urban Environments. International Journal of Applied Earth Observation and Geoinformatics.",
+  "truth": {
+   "work": "10.1109/jstars.2019.2955551"
+  }
+ },
+ {
+  "id": "wrong_details-21",
+  "type": "wrong_details",
+  "subtype": "wrong_year",
+  "expected": "wrong_details",
+  "text": "Single-dose radiotherapy is as effective as short-course fractionated radiotherapy for improving short-term ambulation in patients with metastatic extradural spinal cord compression [1].\n\nReferences\n[1] George, R., Sundararaj, J. J., Govindaraj, R., et al. (2011). Interventions for the treatment of metastatic extradural spinal cord compression in adults. Cochrane Database of Systematic Reviews.",
+  "truth": {
+   "work": "10.1002/14651858.cd006716.pub3"
+  }
+ },
+ {
+  "id": "misused-21",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "The anti-parkinsonian efficacy of certain ergot derivatives is primarily driven by their potent dopamine agonistic activity, which enhances neurotransmission even through modest increases in striatal adenylate cyclase activity [1].\n\nReferences\n[1] Miller, J. M., Jones, P. T., Li, J., et al. (2015). ORNL Experience and Challenges Facing Dynamic Wireless Power Charging of EV's. IEEE Circuits and Systems Magazine. https://doi.org/10.1109/mcas.2015.2419012",
+  "truth": {
+   "claimWork": "10.1159/000136813",
+   "refWork": "10.1109/mcas.2015.2419012"
+  }
+ },
+ {
+  "id": "contradicted-21",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "A robust fuzzy-neural-network control scheme fails to stabilize linear magnetic-levitation systems, as it exacerbates chattering phenomena and struggles to accommodate nonlinear uncertainties without relying on complex model-based transformations [1].\n\nReferences\n[1] Wai, R., & Lee, J. (2008). Robust Levitation Control for Linear Maglev Rail System Using Fuzzy Neural Network. IEEE Transactions on Control Systems Technology. https://doi.org/10.1109/tcst.2008.908205",
+  "truth": {
+   "work": "10.1109/tcst.2008.908205"
+  }
+ },
+ {
+  "id": "correct-22",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Humans prioritize warmth over competence in social evaluation because the evolutionary history of cooperative partner choice rendered warmth a more reliable predictor of future relationship benefits [1].\n\nReferences\n[1] Eisenbruch, A. B., & Krasnow, M. M. (2022). Why Warmth Matters More Than Competence: A New Evolutionary Approach. Perspectives on Psychological Science. https://doi.org/10.1177/17456916211071087",
+  "truth": {
+   "work": "10.1177/17456916211071087"
+  }
+ },
+ {
+  "id": "fabricated-22",
+  "type": "fabricated",
+  "subtype": "fake_doi",
+  "expected": "fabricated",
+  "text": "The integration of a polytetrafluoroethylene layer beneath graphene significantly enhances power generation from moving water droplets by leveraging triboelectrification to increase pseudocapacitance [1].\n\nReferences\n[1] Nakamura, H., Sokolov, E. V., & Thorne, M. (2016). Dynamic Charge Accumulation and Energy Harvesting Efficiency in Graphene-PTFE Heterostructures via Droplet Impact. Journal of Advanced Surface Electrodynamics. https://doi.org/10.1021/932a90106a",
+  "truth": {
+   "work": "10.1021/acsnano.6b03032"
+  }
+ },
+ {
+  "id": "wrong_details-22",
+  "type": "wrong_details",
+  "subtype": "wrong_author",
+  "expected": "wrong_details",
+  "text": "Emerging evidence indicates that sensitive skin is a legitimate physiological condition characterized by measurable biophysical changes rather than being a purely subjective or psychological phenomenon [1].\n\nReferences\n[1] Böller, T., & Maïbach, H. I. (2010). Sensitive skin: closing in on a physiological cause. Contact Dermatitis.",
+  "truth": {
+   "work": "10.1111/j.1600-0536.2009.01697.x"
+  }
+ },
+ {
+  "id": "misused-22",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "The component-based mechanical model effectively predicts the cyclic response of bolted beam-to-column connections by utilizing their fundamental geometrical and mechanical properties [1].\n\nReferences\n[1] Fuse, S., Sugiyama, S., Maitani, M. M., et al. (2014). Elucidating the Structure–Property Relationships of Donor–π‐Acceptor Dyes for Dye‐Sensitized Solar Cells (DSSCs) through Rapid Library Synthesis by a One‐Pot Procedure. Chemistry - A European Journal. https://doi.org/10.1002/chem.201402093",
+  "truth": {
+   "claimWork": "10.1080/13632469.2010.513423",
+   "refWork": "10.1002/chem.201402093"
+  }
+ },
+ {
+  "id": "contradicted-22",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "The persistence of traditional micro-emancipation remains robust, proving that established modes of resistance are entirely sufficient to counter contemporary organizational control [1].\n\nReferences\n[1] Fleming, P. J. (2012). ‘Down with Big Brother!’ The End of ‘Corporate Culturalism’? Journal of Management Studies. https://doi.org/10.1111/j.1467-6486.2012.01056.x",
+  "truth": {
+   "work": "10.1111/j.1467-6486.2012.01056.x"
+  }
+ },
+ {
+  "id": "correct-23",
+  "type": "correct",
+  "subtype": "no_doi",
+  "expected": "ok",
+  "text": "Advanced beamforming techniques and optimized network architectures significantly enhance the efficiency and reliability of multicast and broadcast transmissions for connected vehicle communications [1].\n\nReferences\n[1] Fallgren, M., Abbas, T., Allio, S., et al. (2019). Multicast and Broadcast Enablers for High-Performing Cellular V2X Systems. IEEE Transactions on Broadcasting.",
+  "truth": {
+   "work": "10.1109/tbc.2019.2912619"
+  }
+ },
+ {
+  "id": "fabricated-23",
+  "type": "fabricated",
+  "subtype": "no_doi",
+  "expected": "fabricated",
+  "text": "Genetic susceptibility to familial melanoma is frequently linked to broader cancer risks, suggesting that these identified genes often function as general tumor suppressors or oncogenes [1].\n\nReferences\n[1] Moretti, E. V., Sterling, J. R., & Thorne, M. H. (2015). Genetic Architecture of Familial Melanoma: A Two-Decade Retrospective on CDKN2A Pathogenicity. Journal of Investigative Dermatological Genetics.",
+  "truth": {
+   "work": "10.1111/pcmr.12333"
+  }
+ },
+ {
+  "id": "wrong_details-23",
+  "type": "wrong_details",
+  "subtype": "real_doi_other_title",
+  "expected": "wrong_details",
+  "text": "Steeper dominance hierarchies drive primates to exchange grooming for social benefits like tolerance rather than for reciprocal grooming, though this pattern does not hold across broader evolutionary scales [1].\n\nReferences\n[1] Schino, G., & Aureli, F. (2008). Fast In Situ Airborne Measurement of Ammonia Using a Mid-Infrared Off-Axis ICOS Spectrometer. Biological Journal of the Linnean Society. https://doi.org/10.1111/j.1095-8312.2008.01067.x",
+  "truth": {
+   "work": "10.1111/j.1095-8312.2008.01067.x"
+  }
+ },
+ {
+  "id": "misused-23",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "The translation-rotation energy levels of hydrogen isotopomers encapsulated within a fullerene cage are highly sensitive to both the intermolecular potential and the specific mass and rotational constant of each molecule [1].\n\nReferences\n[1] Goldberg, D. S., Lewis, J. S., Halpern, S. D., et al. (2012). Validation of three coding algorithms to identify patients with end‐stage liver disease in an administrative database. Pharmacoepidemiology and Drug Safety.",
+  "truth": {
+   "claimWork": "10.1063/1.2967858",
+   "refWork": "10.1002/pds.3290"
+  }
+ },
+ {
+  "id": "contradicted-23",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "The human distal colonic mucosa lacks Langerin-expressing dendritic cells and contains a predominant population of CD209-negative macrophages that effectively inhibit HIV-1 transmission [1].\n\nReferences\n[1] Preza, G. C., Tanner, K., Elliott, J. E., et al. (2013). Antigen-Presenting Cell Candidates for HIV-1 Transmission in Human Distal Colonic Mucosa Defined by CD207 Dendritic Cells and CD209 Macrophages. AIDS Research and Human Retroviruses.",
+  "truth": {
+   "work": "10.1089/aid.2013.0145"
+  }
+ },
+ {
+  "id": "correct-24",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Mitochondrial protein lysine hyperacetylation impairs the catalytic activity of succinate dehydrogenase A, thereby disrupting energy metabolism and contributing to the progression of heart failure [1].\n\nReferences\n[1] Horton, J. L., Martin, O. J., Lai, L., et al. (2016). Mitochondrial protein hyperacetylation in the failing heart. JCI Insight. https://doi.org/10.1172/jci.insight.84897",
+  "truth": {
+   "work": "10.1172/jci.insight.84897"
+  }
+ },
+ {
+  "id": "fabricated-24",
+  "type": "fabricated",
+  "subtype": "fake_doi",
+  "expected": "fabricated",
+  "text": "Alternative splicing of the GluN1 subunit regulates synaptic plasticity and cognitive performance, with the absence of the N1 cassette enhancing both long-term potentiation and spatial memory [1].\n\nReferences\n[1] Sterling, E. V., Thorne, M. J., & Tanaka, H. (2018). Alternative Splicing of GluN1 Modulates Synaptic Plasticity and Spatial Memory Consolidation. Journal of Molecular Neuroscience and Synaptic Dynamics. https://doi.org/10.1016/acaaf0de0d",
+  "truth": {
+   "work": "10.1016/j.celrep.2019.11.087"
+  }
+ },
+ {
+  "id": "wrong_details-24",
+  "type": "wrong_details",
+  "subtype": "wrong_year",
+  "expected": "wrong_details",
+  "text": "Distinct synovial molecular phenotypes and their associated serum biomarkers predict differential clinical responses to anti-TNFα and anti-IL-6R biologic therapies in patients with rheumatoid arthritis [1].\n\nReferences\n[1] Dennis, G., Holweg, C. T., Kummerfeld, S., et al. (2017). Synovial phenotypes in rheumatoid arthritis correlate with response to biologic therapeutics. Arthritis Research & Therapy. https://doi.org/10.1186/ar4555",
+  "truth": {
+   "work": "10.1186/ar4555"
+  }
+ },
+ {
+  "id": "misused-24",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "The adoption of cloud computing necessitates a fundamental transformation in organizational culture and service delivery models to effectively navigate the challenges posed by this disruptive innovation [1].\n\nReferences\n[1] Tan, B., Wong, J. J., Sultana, R., et al. (2019). Global Case-Fatality Rates in Pediatric Severe Sepsis and Septic Shock. Archives of Pediatrics and Adolescent Medicine. https://doi.org/10.1001/jamapediatrics.2018.4839",
+  "truth": {
+   "claimWork": "10.1080/09537325.2012.647644",
+   "refWork": "10.1001/jamapediatrics.2018.4839"
+  }
+ },
+ {
+  "id": "contradicted-24",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Lifestyle interventions involving regular physical activity and improved nutrition fail to provide any meaningful improvement to physical function, psychosocial well-being, or key biomarkers associated with long-term survival in cancer survivors [1].\n\nReferences\n[1] Pekmezi, D., & Demark‐Wahnefried, W. (2010). Updated evidence in support of diet and exercise interventions in cancer survivors. Acta Oncologica. https://doi.org/10.3109/0284186x.2010.529822",
+  "truth": {
+   "work": "10.3109/0284186x.2010.529822"
+  }
+ },
+ {
+  "id": "correct-25",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Integrating multitemporal image features through cosegmentation improves building change detection by ensuring spatial correspondence and eliminating inconsistencies inherent in independent segmentation strategies [1].\n\nReferences\n[1] Xiao, P., Yuan, M., Zhang, X., et al. (2017). Cosegmentation for Object-Based Building Change Detection From High-Resolution Remotely Sensed Images. IEEE Transactions on Geoscience and Remote Sensing. https://doi.org/10.1109/tgrs.2016.2627638",
+  "truth": {
+   "work": "10.1109/tgrs.2016.2627638"
+  }
+ },
+ {
+  "id": "fabricated-25",
+  "type": "fabricated",
+  "subtype": "no_doi",
+  "expected": "fabricated",
+  "text": "The length and electronic properties of molecular bridges, combined with solvent polarity and reorganization energy, enable precise control over the kinetics and longevity of multi-step charge-transfer processes [1].\n\nReferences\n[1] Moretti, E. V., Sterling, J. T., & Thorne, M. H. (2020). Kinetic Modulation of Long-Range Charge Separation in Rigid Donor–Acceptor Molecular Architectures. Journal of Physical Chemistry and Molecular Dynamics.",
+  "truth": {
+   "work": "10.1021/jacs.0c01452"
+  }
+ },
+ {
+  "id": "wrong_details-25",
+  "type": "wrong_details",
+  "subtype": "wrong_author",
+  "expected": "wrong_details",
+  "text": "The global burden of urinary bladder cancer is projected to shift toward less developed regions due to population aging and evolving exposure to primary risk factors [1].\n\nReferences\n[1] Mendl, C. B., Aben, K. K., & Kiemeney, L. A. (2009). The present and future burden of urinary bladder cancer in the world. World Journal of Urology. https://doi.org/10.1007/s00345-009-0383-3",
+  "truth": {
+   "work": "10.1007/s00345-009-0383-3"
+  }
+ },
+ {
+  "id": "misused-25",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Implementing supply chain finance significantly enhances the operational effectiveness of textile small and medium enterprises by optimizing working capital and reducing transaction costs [1].\n\nReferences\n[1] Guo, L., Rohde, J. A., & Farraye, F. A. (2019). Stigma and Disclosure in Patients With Inflammatory Bowel Disease. Inflammatory Bowel Diseases. https://doi.org/10.1093/ibd/izz260",
+  "truth": {
+   "claimWork": "10.1108/ijlm-05-2018-0118",
+   "refWork": "10.1093/ibd/izz260"
+  }
+ },
+ {
+  "id": "contradicted-25",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "DNA metabarcoding of commercial salep products confirms that these goods are consistently sourced from cultivated orchid species, demonstrating that current regulations effectively prevent the illegal trade [1].\n\nReferences\n[1] Boer, H. D., Ghorbani, A., Manzanilla, V., et al. (2017). DNA metabarcoding of orchid-derived products reveals widespread illegal orchid trade. Proceedings of the Royal Society B Biological Sciences. https://doi.org/10.1098/rspb.2017.1182",
+  "truth": {
+   "work": "10.1098/rspb.2017.1182"
+  }
+ },
+ {
+  "id": "correct-26",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "The anti-parkinsonian efficacy of certain ergot derivatives is primarily driven by their potent dopamine agonistic activity, which enhances neurotransmission even through modest increases in striatal adenylate cyclase activity [1].\n\nReferences\n[1] Fuxé, K., Fredholm, B. B., Agnati, L., et al. (2008). Interaction of Ergot Drugs with Central Monoamine Systems. Pharmacology. https://doi.org/10.1159/000136813",
+  "truth": {
+   "work": "10.1159/000136813"
+  }
+ },
+ {
+  "id": "fabricated-26",
+  "type": "fabricated",
+  "subtype": "fake_doi",
+  "expected": "fabricated",
+  "text": "A robust fuzzy-neural-network control scheme effectively stabilizes linear magnetic-levitation systems by eliminating chattering phenomena and accommodating nonlinear uncertainties without requiring complex model-based transformations [1].\n\nReferences\n[1] Tanaka, H., Moretti, E. V., & Kalu, S. J. (2009). Adaptive Fuzzy-Neural Architectures for Nonlinear Levitation Stability in High-Speed Maglev Rail Systems. https://doi.org/10.1109/89511a6088",
+  "truth": {
+   "work": "10.1109/tcst.2008.908205"
+  }
+ },
+ {
+  "id": "wrong_details-26",
+  "type": "wrong_details",
+  "subtype": "real_doi_other_title",
+  "expected": "wrong_details",
+  "text": "The swimming speed of a spherical squirmer in a shear-thinning fluid is determined by the specific nature of its surface actuation, which can either enhance or hinder locomotion [1].\n\nReferences\n[1] Datt, C., Zhu, L., Elfring, G. J., et al. (2015). Nowcasting Unemployment Rates with Google Searches: Evidence from the Visegrad Group Countries. Journal of Fluid Mechanics. https://doi.org/10.1017/jfm.2015.600",
+  "truth": {
+   "work": "10.1017/jfm.2015.600"
+  }
+ },
+ {
+  "id": "misused-26",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Certain 3,5-bis(bromohydroxybenzylidene)piperidin-4-one derivatives function as potent, selective CARM1 inhibitors capable of suppressing hormone-dependent gene expression in prostate cancer cells [1].\n\nReferences\n[1] Miller, J. M., Jones, P. T., Li, J., et al. (2015). ORNL Experience and Challenges Facing Dynamic Wireless Power Charging of EV's. IEEE Circuits and Systems Magazine. https://doi.org/10.1109/mcas.2015.2419012",
+  "truth": {
+   "claimWork": "10.1021/jm200453n",
+   "refWork": "10.1109/mcas.2015.2419012"
+  }
+ },
+ {
+  "id": "contradicted-26",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "The physical and functional association between cannabinoid receptor 1 and NMDA receptors facilitates a regulatory mechanism that, when dysregulated, may contribute to glutamatergic hyperfunction and the development of psychosis [1].\n\nReferences\n[1] Sánchez‐Blázquez, P., Rodríguez-Muñoz, M., & Garzón, J. (2014). The cannabinoid receptor 1 associates with NMDA receptors to produce glutamatergic hypofunction: implications in psychosis and schizophrenia. Frontiers in Pharmacology. https://doi.org/10.3389/fphar.2013.00169",
+  "truth": {
+   "work": "10.3389/fphar.2013.00169"
+  }
+ },
+ {
+  "id": "correct-27",
+  "type": "correct",
+  "subtype": "no_doi",
+  "expected": "ok",
+  "text": "The component-based mechanical model effectively predicts the cyclic response of bolted beam-to-column connections by utilizing their fundamental geometrical and mechanical properties [1].\n\nReferences\n[1] Latour, M., Piluso, V., & Rizzano, G. (2011). Cyclic Modeling of Bolted Beam-to-Column Connections: Component Approach. Journal of Earthquake Engineering.",
+  "truth": {
+   "work": "10.1080/13632469.2010.513423"
+  }
+ },
+ {
+  "id": "fabricated-27",
+  "type": "fabricated",
+  "subtype": "no_doi",
+  "expected": "fabricated",
+  "text": "The shift toward biopolitical forms of corporate regulation renders traditional micro-emancipation insufficient, necessitating new modes of resistance to address contemporary organizational control [1].\n\nReferences\n[1] Sterling, J. V., & Vance, E. M. (2011). The Erosion of Hegemonic Branding: Post-Corporate Culturalism in the Digital Age. Journal of Contemporary Socio-Economic Critique.",
+  "truth": {
+   "work": "10.1111/j.1467-6486.2012.01056.x"
+  }
+ },
+ {
+  "id": "wrong_details-27",
+  "type": "wrong_details",
+  "subtype": "wrong_year",
+  "expected": "wrong_details",
+  "text": "Non-native earthworm invasions reduce woodland salamander populations by depleting forest leaf litter and the associated arthropod prey base [1].\n\nReferences\n[1] Maerz, J. C., Nuzzo, V., & Blossey, B. (2005). Declines in Woodland Salamander Abundance Associated with Non‐Native Earthworm and Plant Invasions. Conservation Biology.",
+  "truth": {
+   "work": "10.1111/j.1523-1739.2009.01167.x"
+  }
+ },
+ {
+  "id": "misused-27",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Computer-assisted marking systems significantly improve toric intraocular lens alignment accuracy and reduce surgical duration compared to traditional manual marking techniques [1].\n\nReferences\n[1] Miller, J. M., Jones, P. T., Li, J., et al. (2015). ORNL Experience and Challenges Facing Dynamic Wireless Power Charging of EV's. IEEE Circuits and Systems Magazine.",
+  "truth": {
+   "claimWork": "10.1016/j.jcrs.2017.07.030",
+   "refWork": "10.1109/mcas.2015.2419012"
+  }
+ },
+ {
+  "id": "contradicted-27",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Integrating PbS quantum dots with carbon nanotubes and conductive polymers severely hinders near-infrared light harvesting and charge transport, resulting in diminished photovoltaic power conversion efficiency [1].\n\nReferences\n[1] Wang, D., Baral, J. K., Zhao, H., et al. (2011). Controlled Fabrication of PbS Quantum‐Dot/Carbon‐Nanotube Nanoarchitecture and its Significant Contribution to Near‐Infrared Photon‐to‐Current Conversion. Advanced Functional Materials.",
+  "truth": {
+   "work": "10.1002/adfm.201100824"
+  }
+ },
+ {
+  "id": "correct-28",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "The translation-rotation energy levels of hydrogen isotopomers encapsulated within a fullerene cage are highly sensitive to both the intermolecular potential and the specific mass and rotational constant of each molecule [1].\n\nReferences\n[1] Xu, M., Sebastianelli, F., Bačić, Z., et al. (2008). H 2 , HD, and D2 inside C60: Coupled translation-rotation eigenstates of the endohedral molecules from quantum five-dimensional calculations. The Journal of Chemical Physics. https://doi.org/10.1063/1.2967858",
+  "truth": {
+   "work": "10.1063/1.2967858"
+  }
+ },
+ {
+  "id": "fabricated-28",
+  "type": "fabricated",
+  "subtype": "fake_doi",
+  "expected": "fabricated",
+  "text": "The human distal colonic mucosa contains both Langerin-expressing dendritic cells and a predominant population of CD209-positive macrophages that may facilitate HIV-1 transmission [1].\n\nReferences\n[1] Thorne, M. V., Sterling, E. R., & Vance, J. P. (2013). Spatial Mapping of CD207+ and CD209+ Myeloid Populations in the Human Distal Colon: Implications for HIV-1 Viral Entry. Journal of Mucosal Immunology and Virology. https://doi.org/10.1089/ad7c16b3dc",
+  "truth": {
+   "work": "10.1089/aid.2013.0145"
+  }
+ },
+ {
+  "id": "wrong_details-28",
+  "type": "wrong_details",
+  "subtype": "wrong_author",
+  "expected": "wrong_details",
+  "text": "Off-axis integrated cavity output spectroscopy enables high-precision, real-time airborne monitoring of atmospheric ammonia concentrations, facilitating the detection of localized emission sources under diverse meteorological conditions [1].\n\nReferences\n[1] Kim, T. O., Yu, X., Gupta, M. X., et al. (2013). Fast In Situ Airborne Measurement of Ammonia Using a Mid-Infrared Off-Axis ICOS Spectrometer. Environmental Science & Technology.",
+  "truth": {
+   "work": "10.1021/es401134u"
+  }
+ },
+ {
+  "id": "misused-28",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Low back pain serves as a primary driver of disability in low- and middle-income countries, exacerbating poverty and undermining global health and development objectives [1].\n\nReferences\n[1] Herring, J., VanDyke, M. S., Cummins, R. G., et al. (2016). Communicating Local Climate Risks Online Through an Interactive Data Visualization. Environmental Communication. https://doi.org/10.1080/17524032.2016.1176946",
+  "truth": {
+   "claimWork": "10.2519/jospt.2022.11145",
+   "refWork": "10.1080/17524032.2016.1176946"
+  }
+ },
+ {
+  "id": "contradicted-28",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Delayed surgical intervention for fulminant Clostridium difficile colitis significantly improves survival rates compared to early procedures, particularly when preoperative markers like extreme leukocytosis and septic shock are absent [1].\n\nReferences\n[1] Markelov, A. M., Livert, D. E., & Kohli, H. (2011). Predictors of Fatal Outcome after Colectomy for Fulminant Clostridium difficile Colitis: A 10-Year Experience. The American Surgeon. https://doi.org/10.1177/000313481107700813",
+  "truth": {
+   "work": "10.1177/000313481107700813"
+  }
+ },
+ {
+  "id": "correct-29",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "The adoption of cloud computing necessitates a fundamental transformation in organizational culture and service delivery models to effectively navigate the challenges posed by this disruptive innovation [1].\n\nReferences\n[1] Sultan, N. A., & Bunt‐Kokhuis, S. V. D. (2012). Organisational culture and cloud computing: coping with a disruptive innovation. Technology Analysis and Strategic Management. https://doi.org/10.1080/09537325.2012.647644",
+  "truth": {
+   "work": "10.1080/09537325.2012.647644"
+  }
+ },
+ {
+  "id": "fabricated-29",
+  "type": "fabricated",
+  "subtype": "no_doi",
+  "expected": "fabricated",
+  "text": "Lifestyle interventions involving regular physical activity and improved nutrition significantly enhance physical function, psychosocial well-being, and key biomarkers associated with long-term survival in cancer survivors [1].\n\nReferences\n[1] Moretti, E. V., Sterling, J. T., & Thorne, M. R. (2011). Metabolic Reprogramming and Long-term Survivorship: A Meta-Analysis of Combined Diet and Exercise Protocols in Oncology. Journal of Integrative Cancer Rehabilitation and Survivorship.",
+  "truth": {
+   "work": "10.3109/0284186x.2010.529822"
+  }
+ },
+ {
+  "id": "wrong_details-29",
+  "type": "wrong_details",
+  "subtype": "real_doi_other_title",
+  "expected": "wrong_details",
+  "text": "Children treated for high-risk neuroblastoma face a significant risk of severe hearing loss, which is exacerbated by the combined administration of cisplatin and myeloablative carboplatin [1].\n\nReferences\n[1] Landier, W., Knight, K. R., Wong, F. L., et al. (2014). The impact of immigration on microbial community composition in full-scale anaerobic digesters. Journal of Clinical Oncology. https://doi.org/10.1200/jco.2013.51.2038",
+  "truth": {
+   "work": "10.1200/jco.2013.51.2038"
+  }
+ },
+ {
+  "id": "misused-29",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Exploratory market learning fosters new product differentiation by identifying novel opportunities, while exploitative market learning improves cost efficiency by leveraging existing organizational knowledge and experience [1].\n\nReferences\n[1] Farhi, E., & Werning, I. (2016). A Theory of Macroprudential Policies in the Presence of Nominal Rigidities. Econometrica. https://doi.org/10.3982/ecta11883",
+  "truth": {
+   "claimWork": "10.1111/j.1540-5885.2010.00733.x",
+   "refWork": "10.3982/ecta11883"
+  }
+ },
+ {
+  "id": "contradicted-29",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Cognate status hinders word recognition in both first and second languages by increasing N400 amplitudes, and this processing disadvantage emerges more rapidly in the native language [1].\n\nReferences\n[1] Midgley, K. J., Holcomb, P. J., & B, J. G. (2010). Effects of Cognate Status on Word Comprehension in Second Language Learners: An ERP Investigation. Journal of Cognitive Neuroscience. https://doi.org/10.1162/jocn.2010.21463",
+  "truth": {
+   "work": "10.1162/jocn.2010.21463"
+  }
+ },
+ {
+  "id": "correct-30",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Implementing supply chain finance significantly enhances the operational effectiveness of textile small and medium enterprises by optimizing working capital and reducing transaction costs [1].\n\nReferences\n[1] Ali, Z., Bi, G., & Mehreen, A. (2018). Predicting supply chain effectiveness through supply chain finance. The International Journal of Logistics Management. https://doi.org/10.1108/ijlm-05-2018-0118",
+  "truth": {
+   "work": "10.1108/ijlm-05-2018-0118"
+  }
+ },
+ {
+  "id": "fabricated-30",
+  "type": "fabricated",
+  "subtype": "fake_doi",
+  "expected": "fabricated",
+  "text": "DNA metabarcoding of commercial salep products reveals that a significant portion of these goods contains wild-harvested orchid species, highlighting the need for improved monitoring of the illegal trade [1].\n\nReferences\n[1] Moretti, E. V., Sterling, J. T., & Thorne, M. H. (2016). Molecular authentication of botanical commodities: Uncovering illicit trade networks in the Orchidaceae family via high-throughput metabarcoding. Journal of Forensic Conservation Biology. https://doi.org/10.1098/12b0cf5eda",
+  "truth": {
+   "work": "10.1098/rspb.2017.1182"
+  }
+ },
+ {
+  "id": "wrong_details-30",
+  "type": "wrong_details",
+  "subtype": "wrong_year",
+  "expected": "wrong_details",
+  "text": "Locomotor adaptation exhibits savings through increased learning rates during readaptation, which are driven by the slow learning component and suggest shared computational mechanisms with reaching [1].\n\nReferences\n[1] Mawase, F., Shmuelof, L., Bar‐Haim, S., et al. (2017). Savings in locomotor adaptation explained by changes in learning parameters following initial adaptation. Journal of Neurophysiology. https://doi.org/10.1152/jn.00734.2013",
+  "truth": {
+   "work": "10.1152/jn.00734.2013"
+  }
+ },
+ {
+  "id": "misused-30",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Distinct serum metabolic profiles, characterized by specific alterations in amino acids, bile acids, and lipids, serve as independent predictors for the future development of hepatocellular carcinoma [1].\n\nReferences\n[1] Kansanen, P. (2009). Subject‐matter didactics as a central knowledge base for teachers, or should it be called pedagogical content knowledge? Pedagogy Culture and Society. https://doi.org/10.1080/14681360902742845",
+  "truth": {
+   "claimWork": "10.1158/1940-6207.capr-17-0249",
+   "refWork": "10.1080/14681360902742845"
+  }
+ },
+ {
+  "id": "contradicted-30",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Higher serum concentrations of vitamin D during pregnancy and early childhood may increase the risk of developing autism and exacerbate the severity of its symptoms [1].\n\nReferences\n[1] Cannell, J. J., & Grant, W. B. (2013). What is the role of vitamin D in autism? Dermato-Endocrinology. https://doi.org/10.4161/derm.24356",
+  "truth": {
+   "work": "10.4161/derm.24356"
+  }
+ },
+ {
+  "id": "correct-31",
+  "type": "correct",
+  "subtype": "no_doi",
+  "expected": "ok",
+  "text": "Certain 3,5-bis(bromohydroxybenzylidene)piperidin-4-one derivatives function as potent, selective CARM1 inhibitors capable of suppressing hormone-dependent gene expression in prostate cancer cells [1].\n\nReferences\n[1] Cheng, D., Valente, S., Castellano, S., et al. (2011). Novel 3,5-Bis(bromohydroxybenzylidene)piperidin-4-ones as Coactivator-Associated Arginine Methyltransferase 1 Inhibitors: Enzyme Selectivity and Cellular Activity. Journal of Medicinal Chemistry.",
+  "truth": {
+   "work": "10.1021/jm200453n"
+  }
+ },
+ {
+  "id": "fabricated-31",
+  "type": "fabricated",
+  "subtype": "no_doi",
+  "expected": "fabricated",
+  "text": "The physical and functional association between cannabinoid receptor 1 and NMDA receptors facilitates a regulatory mechanism that, when dysregulated, may contribute to glutamatergic hypofunction and the development of psychosis [1].\n\nReferences\n[1] Thorne, M. V., Sterling, E. R., & Vance, J. P. (2014). CB1-NMDAR Heteromeric Complexes and the Modulation of Glutamatergic Signaling in Schizophrenia Pathophysiology. Journal of Molecular Neuropsychiatry and Synaptic Plasticity.",
+  "truth": {
+   "work": "10.3389/fphar.2013.00169"
+  }
+ },
+ {
+  "id": "wrong_details-31",
+  "type": "wrong_details",
+  "subtype": "wrong_author",
+  "expected": "wrong_details",
+  "text": "The second ROSAT all-sky survey catalogue provides approximately 135,000 X-ray detections, with the reliability of these sources significantly increasing when applying more conservative likelihood thresholds [1].\n\nReferences\n[1] Soto, C. J., Freyberg, M. J., Trümper, J. E., et al. (2016). Second ROSAT all-sky survey (2RXS) source catalogue. Springer Link (Chiba Institute of Technology). https://doi.org/10.1051/0004-6361/201525648/pdf",
+  "truth": {
+   "work": "10.1051/0004-6361/201525648/pdf"
+  }
+ },
+ {
+  "id": "misused-31",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Active HEDGEHOG-GLI signaling is essential for colon cancer progression, driving tumor growth, stem cell self-renewal, and the development of metastases through the induction of epithelial-to-mesenchymal transition [1].\n\nReferences\n[1] Kansanen, P. (2009). Subject‐matter didactics as a central knowledge base for teachers, or should it be called pedagogical content knowledge? Pedagogy Culture and Society.",
+  "truth": {
+   "claimWork": "10.1002/emmm.200900039",
+   "refWork": "10.1080/14681360902742845"
+  }
+ },
+ {
+  "id": "contradicted-31",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Ornamental fish and their transport water pose a negligible risk as reservoirs for multidrug-resistant bacteria and antimicrobial resistance genes [1].\n\nReferences\n[1] Verner–Jeffreys, D. W., Welch, T. J., Schwarz, T. I., et al. (2009). High Prevalence of Multidrug-Tolerant Bacteria and Associated Antimicrobial Resistance Genes Isolated from Ornamental Fish and Their Carriage Water. PLoS ONE.",
+  "truth": {
+   "work": "10.1371/journal.pone.0008388"
+  }
+ },
+ {
+  "id": "correct-32",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Computer-assisted marking systems significantly improve toric intraocular lens alignment accuracy and reduce surgical duration compared to traditional manual marking techniques [1].\n\nReferences\n[1] Mayer, W. J., Kreutzer, T. C., Dirisamer, M., et al. (2017). Comparison of visual outcomes, alignment accuracy, and surgical time between 2 methods of corneal marking for toric intraocular lens implantation. Journal of Cataract & Refractive Surgery. https://doi.org/10.1016/j.jcrs.2017.07.030",
+  "truth": {
+   "work": "10.1016/j.jcrs.2017.07.030"
+  }
+ },
+ {
+  "id": "wrong_details-32",
+  "type": "wrong_details",
+  "subtype": "real_doi_other_title",
+  "expected": "wrong_details",
+  "text": "Google search data significantly improves the accuracy of unemployment rate nowcasting models for the Czech Republic and Hungary, though its predictive utility remains inconsistent for Poland and Slovakia [1].\n\nReferences\n[1] Pavlíček, J., & Krištoufek, L. (2015). Performance analysis of IEEE 802.15.4 non-beacon mode with the unslotted CSMA/CA. PLoS ONE. https://doi.org/10.1371/journal.pone.0127084",
+  "truth": {
+   "work": "10.1371/journal.pone.0127084"
+  }
+ },
+ {
+  "id": "misused-32",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Bigraphical reactive systems provide a unified framework for modeling spatially distributed computation and communication by mapping process calculi structures and behaviors onto formal graphical representations [1].\n\nReferences\n[1] Krois, A. S., Dyson, H. J., & Wright, P. E. (2018). Long-range regulation of p53 DNA binding by its intrinsically disordered N-terminal transactivation domain. Proceedings of the National Academy of Sciences. https://doi.org/10.1073/pnas.1814051115",
+  "truth": {
+   "claimWork": "10.48456/tr-580",
+   "refWork": "10.1073/pnas.1814051115"
+  }
+ },
+ {
+  "id": "contradicted-32",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "IFI16 functions as a primary activator of herpesvirus gene expression, providing a less significant barrier to viral replication than the cytokine-inducing pathways mediated by cGAS [1].\n\nReferences\n[1] Diner, B. A., Lum, K. K., Toettcher, J. E., et al. (2016). Viral DNA Sensors IFI16 and Cyclic GMP-AMP Synthase Possess Distinct Functions in Regulating Viral Gene Expression, Immune Defenses, and Apoptotic Responses during Herpesvirus Infection. mBio. https://doi.org/10.1128/mbio.01553-16",
+  "truth": {
+   "work": "10.1128/mbio.01553-16"
+  }
+ },
+ {
+  "id": "correct-33",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Low back pain serves as a primary driver of disability in low- and middle-income countries, exacerbating poverty and undermining global health and development objectives [1].\n\nReferences\n[1] Sharma, S., & McAuley, J. H. (2022). Low Back Pain in Low- and Middle-Income Countries, Part 1: The Problem. Journal of Orthopaedic and Sports Physical Therapy. https://doi.org/10.2519/jospt.2022.11145",
+  "truth": {
+   "work": "10.2519/jospt.2022.11145"
+  }
+ },
+ {
+  "id": "wrong_details-33",
+  "type": "wrong_details",
+  "subtype": "wrong_year",
+  "expected": "wrong_details",
+  "text": "Post-starburst galaxies retain significant reservoirs of gas and dust that are prevented from collapsing into new stars by mechanical heating and radiation from aging stellar populations [1].\n\nReferences\n[1] Smercina, A., Smith, J. D., Dale, D. A., et al. (2014). After the Fall: The Dust and Gas in E+A Post-starburst Galaxies. The Astrophysical Journal.",
+  "truth": {
+   "work": "10.3847/1538-4357/aaafcd"
+  }
+ },
+ {
+  "id": "misused-33",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Optimizing the energy levels of the highest occupied and lowest unoccupied molecular orbitals is essential for achieving superior power conversion efficiency in donor-π-acceptor dye-sensitized solar cells [1].\n\nReferences\n[1] Schmeer, K. K. (2011). The Child Health Disadvantage of Parental Cohabitation. Journal of Marriage and the Family. https://doi.org/10.1111/j.1741-3737.2010.00797.x",
+  "truth": {
+   "claimWork": "10.1002/chem.201402093",
+   "refWork": "10.1111/j.1741-3737.2010.00797.x"
+  }
+ },
+ {
+  "id": "contradicted-33",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "The rehydriding of sodium aluminum hydride is hindered by a rigid, ordered intermediate species characterized by a negligible concentration of aluminum hydride vacancies [1].\n\nReferences\n[1] Ivancic, T. M., Hwang, S., Bowman, R. C., et al. (2010). Discovery of A New Al Species in Hydrogen Reactions of NaAlH 4. The Journal of Physical Chemistry Letters. https://doi.org/10.1021/jz1007998",
+  "truth": {
+   "work": "10.1021/jz1007998"
+  }
+ },
+ {
+  "id": "correct-34",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Exploratory market learning fosters new product differentiation by identifying novel opportunities, while exploitative market learning improves cost efficiency by leveraging existing organizational knowledge and experience [1].\n\nReferences\n[1] Kim, N., & Atuahene‐Gima, K. (2010). Using Exploratory and Exploitative Market Learning for New Product Development *. Journal of Product Innovation Management. https://doi.org/10.1111/j.1540-5885.2010.00733.x",
+  "truth": {
+   "work": "10.1111/j.1540-5885.2010.00733.x"
+  }
+ },
+ {
+  "id": "fabricated-34",
+  "type": "fabricated",
+  "subtype": "fake_doi",
+  "expected": "fabricated",
+  "text": "Cognate status facilitates word recognition in both first and second languages by reducing N400 amplitudes, though this processing advantage emerges more rapidly in the native language [1].\n\nReferences\n[1] Moretti, E. V., & Sterling, J. R. (2010). Electrophysiological Correlates of Cognate Processing: Evidence from Late-Stage L2 Acquisition. Journal of Neurolinguistics and Bilingual Cognition. https://doi.org/10.1162/79632fa099",
+  "truth": {
+   "work": "10.1162/jocn.2010.21463"
+  }
+ },
+ {
+  "id": "wrong_details-34",
+  "type": "wrong_details",
+  "subtype": "wrong_author",
+  "expected": "wrong_details",
+  "text": "Time-integrated current fluctuations in anharmonic chains typically follow Gaussian statistics, except at moving sound peaks where they exhibit suppressed fluctuations governed by the Baik–Rains distribution [1].\n\nReferences\n[1] Weijers, D., & Spohn, H. E. (2015). Current fluctuations for anharmonic chains in thermal equilibrium. Journal of Statistical Mechanics Theory and Experiment.",
+  "truth": {
+   "work": "10.1088/1742-5468/2015/03/p03007"
+  }
+ },
+ {
+  "id": "misused-34",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "East Asian forest biomass carbon sinks have significantly increased over the last four decades, primarily driven by a combination of forest expansion and enhanced biomass density across the region [1].\n\nReferences\n[1] Farhi, E., & Werning, I. (2016). A Theory of Macroprudential Policies in the Presence of Nominal Rigidities. Econometrica. https://doi.org/10.3982/ecta11883",
+  "truth": {
+   "claimWork": "10.1111/gcb.12512",
+   "refWork": "10.3982/ecta11883"
+  }
+ },
+ {
+  "id": "contradicted-34",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Benign prostatic hyperplasia is remarkably rare among men aged forty and older in mainland China, with occurrence rates declining significantly alongside advancing age [1].\n\nReferences\n[1] Wang, W., Yuwen, G., Zhang, D., et al. (2015). The prevalence of benign prostatic hyperplasia in mainland China: evidence from epidemiological surveys. Scientific Reports. https://doi.org/10.1038/srep13546",
+  "truth": {
+   "work": "10.1038/srep13546"
+  }
+ },
+ {
+  "id": "correct-35",
+  "type": "correct",
+  "subtype": "no_doi",
+  "expected": "ok",
+  "text": "Distinct serum metabolic profiles, characterized by specific alterations in amino acids, bile acids, and lipids, serve as independent predictors for the future development of hepatocellular carcinoma [1].\n\nReferences\n[1] Jee, S. H., Kim, M., Kim, M. K., et al. (2018). Metabolomics Profiles of Hepatocellular Carcinoma in a Korean Prospective Cohort: The Korean Cancer Prevention Study-II. Cancer Prevention Research.",
+  "truth": {
+   "work": "10.1158/1940-6207.capr-17-0249"
+  }
+ },
+ {
+  "id": "fabricated-35",
+  "type": "fabricated",
+  "subtype": "no_doi",
+  "expected": "fabricated",
+  "text": "Higher serum concentrations of vitamin D during pregnancy and early childhood may decrease the risk of developing autism and help mitigate the severity of its symptoms [1].\n\nReferences\n[1] Moretti, E. V., & Sterling, J. T. (2014). Neuro-immunological pathways of calcitriol deficiency in pediatric autism spectrum disorders. Journal of Nutritional Neuroscience and Psychiatry.",
+  "truth": {
+   "work": "10.4161/derm.24356"
+  }
+ },
+ {
+  "id": "wrong_details-35",
+  "type": "wrong_details",
+  "subtype": "real_doi_other_title",
+  "expected": "wrong_details",
+  "text": "Accounting for microbial immigration from influent is essential to accurately distinguish between active, process-relevant populations and transient organisms within anaerobic digester communities [1].\n\nReferences\n[1] Kirkegaard, R. H., McIlroy, S. J., Kristensen, J. M., et al. (2017). Human Prostate Tumor Antigen–Specific CD8+ Regulatory T Cells Are Inhibited by CTLA-4 or IL-35 Blockade. Scientific Reports. https://doi.org/10.1038/s41598-017-09303-0",
+  "truth": {
+   "work": "10.1038/s41598-017-09303-0"
+  }
+ },
+ {
+  "id": "misused-35",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Specific Bacillus subtilis strains serve as effective probiotic feed additives that significantly reduce mortality in catfish by providing protection against common aquatic bacterial pathogens [1].\n\nReferences\n[1] Krois, A. S., Dyson, H. J., & Wright, P. E. (2018). Long-range regulation of p53 DNA binding by its intrinsically disordered N-terminal transactivation domain. Proceedings of the National Academy of Sciences.",
+  "truth": {
+   "claimWork": "10.1371/journal.pone.0045793",
+   "refWork": "10.1073/pnas.1814051115"
+  }
+ },
+ {
+  "id": "contradicted-35",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "TWEAK suppresses renal inflammation by inhibiting the epidermal growth factor receptor through an ADAM17-independent mechanism that blocks downstream ERK signaling and proinflammatory cytokine expression [1].\n\nReferences\n[1] Rayego‐Mateos, S., Morgado‐Pascual, J. L., Sanz, A. B., et al. (2013). TWEAK transactivation of the epidermal growth factor receptor mediates renal inflammation. The Journal of Pathology.",
+  "truth": {
+   "work": "10.1002/path.4250"
+  }
+ },
+ {
+  "id": "correct-36",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Active HEDGEHOG-GLI signaling is essential for colon cancer progression, driving tumor growth, stem cell self-renewal, and the development of metastases through the induction of epithelial-to-mesenchymal transition [1].\n\nReferences\n[1] Varnat, F., Duquet, A., Malerba, M., et al. (2009). Human colon cancer epithelial cells harbour active HEDGEHOG‐GLI signalling that is essential for tumour growth, recurrence, metastasis and stem cell survival and expansion. EMBO Molecular Medicine. https://doi.org/10.1002/emmm.200900039",
+  "truth": {
+   "work": "10.1002/emmm.200900039"
+  }
+ },
+ {
+  "id": "fabricated-36",
+  "type": "fabricated",
+  "subtype": "fake_doi",
+  "expected": "fabricated",
+  "text": "Ornamental fish and their transport water serve as significant reservoirs for multidrug-resistant bacteria and a diverse array of antimicrobial resistance genes [1].\n\nReferences\n[1] Moretti, E. V., Thorne, J. K., & Gupta, S. R. (2008). Genomic Characterization of Multidrug-Resistant Bacterial Pathogens in Ornamental Aquaculture Systems. Journal of Aquatic Animal Health and Microbiology. https://doi.org/10.1371/22f4075fa7",
+  "truth": {
+   "work": "10.1371/journal.pone.0008388"
+  }
+ },
+ {
+  "id": "wrong_details-36",
+  "type": "wrong_details",
+  "subtype": "wrong_year",
+  "expected": "wrong_details",
+  "text": "The maturity stage and drying method significantly influence the color, bulk density, and water absorption capacity of plantain and cooking banana flours [1].\n\nReferences\n[1] Falade, K. O., & Oyeyinka, S. A. (2017). Color, Chemical and Functional Properties of Plantain Cultivars and Cooking Banana Flour as Affected by Drying Method and Maturity. Journal of Food Processing and Preservation. https://doi.org/10.1111/jfpp.12292",
+  "truth": {
+   "work": "10.1111/jfpp.12292"
+  }
+ },
+ {
+  "id": "misused-36",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Algorithms combining cirrhosis and hepatic decompensation codes provide a highly accurate method for identifying patients with end-stage liver disease within administrative databases [1].\n\nReferences\n[1] Krois, A. S., Dyson, H. J., & Wright, P. E. (2018). Long-range regulation of p53 DNA binding by its intrinsically disordered N-terminal transactivation domain. Proceedings of the National Academy of Sciences. https://doi.org/10.1073/pnas.1814051115",
+  "truth": {
+   "claimWork": "10.1002/pds.3290",
+   "refWork": "10.1073/pnas.1814051115"
+  }
+ },
+ {
+  "id": "contradicted-36",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Emerging therapeutic interventions, ranging from pharmacological agents to robotic-assisted physiotherapy, demonstrate negligible efficacy in promoting neuroplasticity or functional recovery for patients following a stroke [1].\n\nReferences\n[1] Cramer, S. C., & Riley, J. D. (2008). Neuroplasticity and brain repair after stroke. Current Opinion in Neurology. https://doi.org/10.1097/wco.0b013e3282f36cb6",
+  "truth": {
+   "work": "10.1097/wco.0b013e3282f36cb6"
+  }
+ },
+ {
+  "id": "correct-37",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Bigraphical reactive systems provide a unified framework for modeling spatially distributed computation and communication by mapping process calculi structures and behaviors onto formal graphical representations [1].\n\nReferences\n[1] Jensen, O. H., & Milner, R. (2021). Bigraphs and mobile processes (revised). https://doi.org/10.48456/tr-580",
+  "truth": {
+   "work": "10.48456/tr-580"
+  }
+ },
+ {
+  "id": "fabricated-37",
+  "type": "fabricated",
+  "subtype": "no_doi",
+  "expected": "fabricated",
+  "text": "IFI16 functions as a primary repressor of herpesvirus gene expression, providing a more significant barrier to viral replication than the cytokine-inducing pathways mediated by cGAS [1].\n\nReferences\n[1] Moretti, E. V., Sterling, J. T., & Halloway, M. R. (2016). Differential Regulation of Herpesvirus Replication and Host Apoptotic Pathways by IFI16 and cGAS DNA Sensors. Journal of Molecular Virology and Innate Immunity.",
+  "truth": {
+   "work": "10.1128/mbio.01553-16"
+  }
+ },
+ {
+  "id": "wrong_details-37",
+  "type": "wrong_details",
+  "subtype": "wrong_author",
+  "expected": "wrong_details",
+  "text": "A mathematical model based on M/G/1 queueing theory effectively determines optimal device density while balancing packet delay, loss probability, and battery longevity in unslotted CSMA/CA networks [1].\n\nReferences\n[1] Chu, H., Park, J., Chong, H. J., et al. (2008). Performance analysis of IEEE 802.15.4 non-beacon mode with the unslotted CSMA/CA. IEEE Communications Letters. https://doi.org/10.1109/lcomm.2008.071870",
+  "truth": {
+   "work": "10.1109/lcomm.2008.071870"
+  }
+ },
+ {
+  "id": "misused-37",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "The formation of olfactory long-term memory in honeybees is accompanied by a transcription-dependent increase in the density of synaptic microglomeruli within the mushroom bodies [1].\n\nReferences\n[1] Xie, L., Mouillet, J., Chu, T., et al. (2014). C19MC MicroRNAs Regulate the Migration of Human Trophoblasts. Endocrinology. https://doi.org/10.1210/en.2014-1501",
+  "truth": {
+   "claimWork": "10.1523/jneurosci.0841-10.2010",
+   "refWork": "10.1210/en.2014-1501"
+  }
+ },
+ {
+  "id": "contradicted-37",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "The stability of both the electrolyte salt and the binder effectively prevents the formation of surface residues, thereby preserving cathode porosity and mitigating capacity fading in lithium-oxygen batteries [1].\n\nReferences\n[1] Younesi, R., Hahlin, M., Treskow, M., et al. (2012). Ether Based Electrolyte, LiB(CN)4 Salt and Binder Degradation in the Li–O2 Battery Studied by Hard X-ray Photoelectron Spectroscopy (HAXPES). The Journal of Physical Chemistry C. https://doi.org/10.1021/jp303691m",
+  "truth": {
+   "work": "10.1021/jp303691m"
+  }
+ },
+ {
+  "id": "correct-38",
+  "type": "correct",
+  "subtype": "with_doi",
+  "expected": "ok",
+  "text": "Optimizing the energy levels of the highest occupied and lowest unoccupied molecular orbitals is essential for achieving superior power conversion efficiency in donor-π-acceptor dye-sensitized solar cells [1].\n\nReferences\n[1] Fuse, S., Sugiyama, S., Maitani, M. M., et al. (2014). Elucidating the Structure–Property Relationships of Donor–π‐Acceptor Dyes for Dye‐Sensitized Solar Cells (DSSCs) through Rapid Library Synthesis by a One‐Pot Procedure. Chemistry - A European Journal. https://doi.org/10.1002/chem.201402093",
+  "truth": {
+   "work": "10.1002/chem.201402093"
+  }
+ },
+ {
+  "id": "fabricated-38",
+  "type": "fabricated",
+  "subtype": "fake_doi",
+  "expected": "fabricated",
+  "text": "The rehydriding of sodium aluminum hydride is facilitated by a highly mobile, defective intermediate species characterized by a significant concentration of aluminum hydride vacancies [1].\n\nReferences\n[1] Thorne, M. V., Kovic, E. R., & Halloway, J. S. (2011). Spectroscopic Evidence for a Transient AlH2 Intermediate in the Catalytic Hydrogenation of NaAlH4. Journal of Solid-State Hydride Research. https://doi.org/10.1021/0a0cf2ae99",
+  "truth": {
+   "work": "10.1021/jz1007998"
+  }
+ },
+ {
+  "id": "wrong_details-38",
+  "type": "wrong_details",
+  "subtype": "real_doi_other_title",
+  "expected": "wrong_details",
+  "text": "De novo transcriptome assembly provides a robust framework for identifying orthologous genes and resolving phylogenetic relationships across diverse anthozoan species [1].\n\nReferences\n[1] Kitchen, S. A., Crowder, C. M., Poole, A. Z., et al. (2015). Diagnostic leukapheresis enables reliable detection of circulating tumor cells of nonmetastatic cancer patients. G3 Genes Genomes Genetics. https://doi.org/10.1534/g3.115.020164",
+  "truth": {
+   "work": "10.1534/g3.115.020164"
+  }
+ },
+ {
+  "id": "misused-38",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Implementing dynamic wireless charging for electric vehicles requires overcoming significant technical hurdles related to high-power energy transfer, utility-scale management, and reliable vehicle-to-infrastructure communication in dense urban environments [1].\n\nReferences\n[1] Krois, A. S., Dyson, H. J., & Wright, P. E. (2018). Long-range regulation of p53 DNA binding by its intrinsically disordered N-terminal transactivation domain. Proceedings of the National Academy of Sciences. https://doi.org/10.1073/pnas.1814051115",
+  "truth": {
+   "claimWork": "10.1109/mcas.2015.2419012",
+   "refWork": "10.1073/pnas.1814051115"
+  }
+ },
+ {
+  "id": "contradicted-38",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Integrating structural knowledge and spatial relationships into a region-based convolutional neural network consistently undermines the detection accuracy of small, complex transmission line fittings in aerial imagery [1].\n\nReferences\n[1] Zhai, Y., Yang, X., Wang, Q., et al. (2021). Hybrid Knowledge R-CNN for Transmission Line Multifitting Detection. IEEE Transactions on Instrumentation and Measurement. https://doi.org/10.1109/tim.2021.3096600",
+  "truth": {
+   "work": "10.1109/tim.2021.3096600"
+  }
+ },
+ {
+  "id": "correct-39",
+  "type": "correct",
+  "subtype": "no_doi",
+  "expected": "ok",
+  "text": "East Asian forest biomass carbon sinks have significantly increased over the last four decades, primarily driven by a combination of forest expansion and enhanced biomass density across the region [1].\n\nReferences\n[1] Fang, J., Guo, Z., Hu, H., et al. (2014). Forest biomass carbon sinks in East Asia, with special reference to the relative contributions of forest expansion and forest growth. Global Change Biology.",
+  "truth": {
+   "work": "10.1111/gcb.12512"
+  }
+ },
+ {
+  "id": "fabricated-39",
+  "type": "fabricated",
+  "subtype": "no_doi",
+  "expected": "fabricated",
+  "text": "Benign prostatic hyperplasia is highly prevalent among men aged forty and older in mainland China, with occurrence rates rising significantly alongside advancing age [1].\n\nReferences\n[1] Zhang, W., Wang, L., & Zhao, H. (2014). Temporal Trends and Regional Variations in the Prevalence of Benign Prostatic Hyperplasia: A Meta-Analysis of Epidemiological Surveys in Mainland China. Journal of Chinese Urological Epidemiology.",
+  "truth": {
+   "work": "10.1038/srep13546"
+  }
+ },
+ {
+  "id": "wrong_details-39",
+  "type": "wrong_details",
+  "subtype": "wrong_year",
+  "expected": "wrong_details",
+  "text": "Progesterone regulates female reproductive processes through a complex interplay between rapid, non-genomic signaling pathways and traditional transcriptional mechanisms [1].\n\nReferences\n[1] Gellersen, B., Fernandes, M. S., & Brosens, J. J. (2004). Non-genomic progesterone actions in female reproduction. Human Reproduction Update.",
+  "truth": {
+   "work": "10.1093/humupd/dmn044"
+  }
+ },
+ {
+  "id": "misused-39",
+  "type": "misused",
+  "subtype": "unrelated_paper",
+  "expected": "misused",
+  "text": "Stigmatization in patients with inflammatory bowel disease significantly exacerbates psychological distress and diminishes overall quality of life, necessitating targeted clinical interventions to improve patient outcomes [1].\n\nReferences\n[1] Krois, A. S., Dyson, H. J., & Wright, P. E. (2018). Long-range regulation of p53 DNA binding by its intrinsically disordered N-terminal transactivation domain. Proceedings of the National Academy of Sciences.",
+  "truth": {
+   "claimWork": "10.1093/ibd/izz260",
+   "refWork": "10.1073/pnas.1814051115"
+  }
+ },
+ {
+  "id": "contradicted-39",
+  "type": "contradicted",
+  "subtype": "opposite_claim",
+  "expected": "misused",
+  "text": "Bacterial small regulatory RNAs consistently repress gene expression by binding to specific regions of target mRNAs, typically triggering transcript degradation through the recruitment of ribonucleases and RNA chaperones [1].\n\nReferences\n[1] Papenfort, K., & Vanderpool, C. K. (2015). Target activation by regulatory RNAs in bacteria. FEMS Microbiology Reviews.",
+  "truth": {
+   "work": "10.1093/femsre/fuv016"
+  }
+ }
+]
