@@ -1,0 +1,12 @@
+{
+  "name": "cite3",
+  "version": "0.1.0",
+  "description": "Cite 3: checks the sources cited in a text at three levels (exists, details match, supports the claim) and measures how well each level catches errors.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test",
+    "smoke": "node bench-run.mjs smoke",
+    "bench": "node bench-run.mjs run"
+  }
+}
