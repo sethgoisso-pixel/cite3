@@ -27,7 +27,7 @@ const EXAMPLES = [
   {
     name: "Clean essay",
     text: [
-      "Self-attention lets a model relate every position of a sequence to every other one directly [1]. Adam adapts the step size of each parameter using estimates of the moments of the gradient [2]. Residual connections make very deep networks easier to train [3].",
+      "The Transformer is based solely on attention mechanisms, with no recurrence or convolutions [1]. Adam adapts the step size of each parameter using estimates of the moments of the gradient [2]. Residual connections make very deep networks easier to train [3].",
       "",
       "References",
       REFS.attention,
@@ -38,7 +38,7 @@ const EXAMPLES = [
   {
     name: "A made-up source",
     text: [
-      "Self-attention lets a model relate every position of a sequence to every other one directly [1]. Composting in dense cities measurably alters spacetime curvature [2].",
+      "The Transformer is based solely on attention mechanisms, with no recurrence or convolutions [1]. Composting in dense cities measurably alters spacetime curvature [2].",
       "",
       "References",
       REFS.attention,
