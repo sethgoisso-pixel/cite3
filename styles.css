@@ -60,7 +60,7 @@ textarea { width: 100%; background: var(--card); color: var(--fg); border: 1px s
 .bar { display: grid; grid-template-columns: 118px 1fr 118px; gap: 8px; align-items: center; font-size: 13px; margin: 3px 0; }
 .track { background: var(--off-bg); border-radius: 5px; height: 14px; overflow: hidden; }
 .fill { height: 100%; border-radius: 5px; }
-.fill.v1 { background: var(--v1); } .fill.v2 { background: var(--v2); } .fill.v3 { background: var(--v3); }
+.fill.v1 { background: var(--v1); } .fill.v2 { background: var(--v2); } .fill.v3 { background: var(--v3); } .fill.v4 { background: var(--warn); }
 .bar .val { text-align: right; font-variant-numeric: tabular-nums; }
 @media (max-width: 560px) { .bar { grid-template-columns: 92px 1fr 96px; font-size: 12px; } .lv { grid-template-columns: 1fr; } }
 table.plain { width: 100%; border-collapse: collapse; font-size: 15px; margin: 10px 0; }

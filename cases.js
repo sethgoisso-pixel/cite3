@@ -226,7 +226,7 @@ export function wilson(k, n) {
 
 export function summarize(records) {
   const byType = {};
-  for (const t of TYPES) byType[t] = { total: 0, valid: 0, errors: 0, flagged: { L1: 0, L1L2: 0, L1L2L3: 0 }, subtypes: {} };
+  for (const t of TYPES) byType[t] = { total: 0, valid: 0, errors: 0, flagged: { L1: 0, L1L2: 0, L1L2L3: 0, ANY: 0 }, unverifiable: 0, subtypes: {} };
   for (const rec of records) {
     const row = byType[rec.case.type];
     if (!row) continue;
@@ -238,6 +238,8 @@ export function summarize(records) {
     }
     row.valid++;
     const st = (row.subtypes[rec.case.subtype || "all"] ||= { valid: 0, flagged: { L1: 0, L1L2: 0, L1L2L3: 0 } });
+    if (rec.check.level3.status === "unverifiable") row.unverifiable++;
+    if (flaggedBy("L1L2L3", rec.check) || rec.check.overall === "warn") row.flagged.ANY++;
     st.valid++;
     for (const v of ["L1", "L1L2", "L1L2L3"]) {
       if (flaggedBy(v, rec.check)) {
@@ -262,13 +264,16 @@ export function toMarkdown(summary, meta = {}) {
   lines.push("");
   lines.push("Share of cases each checker flags. 95% confidence interval in brackets. For `correct` cases, lower is better (false alarms). For the others, higher is better (errors caught).");
   lines.push("");
-  lines.push("| Case type | Valid runs | Level 1 only (exists?) | Levels 1+2 (+ details) | Levels 1+2+3 (+ claim) |");
-  lines.push("|---|---|---|---|---|");
+  lines.push("| Case type | Valid runs | Level 1 only (exists?) | Levels 1+2 (+ details) | Levels 1+2+3 (+ claim) | Any alert, incl. warnings |");
+  lines.push("|---|---|---|---|---|---|");
   for (const t of TYPES) {
     const r = summary.byType[t];
     const label = t === "correct" ? "correct (false alarms)" : t;
-    lines.push(`| ${label} | ${r.valid}/${r.total} | ${pct(r.flagged.L1, r.valid)} | ${pct(r.flagged.L1L2, r.valid)} | ${pct(r.flagged.L1L2L3, r.valid)} |`);
+    lines.push(`| ${label} | ${r.valid}/${r.total} | ${pct(r.flagged.L1, r.valid)} | ${pct(r.flagged.L1L2, r.valid)} | ${pct(r.flagged.L1L2L3, r.valid)} | ${pct(r.flagged.ANY, r.valid)} |`);
   }
+  lines.push("");
+  const unv = TYPES.reduce((a, t) => a + summary.byType[t].unverifiable, 0);
+  lines.push(`Cases where level 3 could not judge because no abstract was available: ${unv}. They count as not flagged.`);
   lines.push("");
   lines.push("Runs with a lookup error (network, rate limit) are left out of the percentages and counted in the second column.");
   return lines.join("\n");

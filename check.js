@@ -7,6 +7,7 @@ import { parseText } from "./parse.js";
 
 export function norm(s) {
   return String(s || "")
+    .replace(/[\u00ad\u200b]/g, "")
     .normalize("NFKD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
@@ -15,14 +16,28 @@ export function norm(s) {
     .trim();
 }
 
+const tokens = (s) => new Set(norm(s).split(" ").filter(Boolean));
+
 // Dice coefficient on word sets: 1 = same words, 0 = nothing in common.
 export function titleSim(a, b) {
-  const A = new Set(norm(a).split(" ").filter(Boolean));
-  const B = new Set(norm(b).split(" ").filter(Boolean));
+  const A = tokens(a);
+  const B = tokens(b);
   if (!A.size || !B.size) return 0;
   let hit = 0;
   for (const w of A) if (B.has(w)) hit++;
   return (2 * hit) / (A.size + B.size);
+}
+
+// Like titleSim, but a cited title that also carries the journal name after it still matches
+// when it contains (almost) every word of the real title.
+export function titleMatch(cited, record) {
+  const A = tokens(cited);
+  const B = tokens(record);
+  if (!A.size || !B.size) return 0;
+  let hit = 0;
+  for (const w of B) if (A.has(w)) hit++;
+  const dice = titleSim(cited, record);
+  return B.size >= 4 ? Math.max(dice, 0.9 * (hit / B.size)) : dice;
 }
 
 // Position of the cited surname in the real author list, or -1.
@@ -35,14 +50,28 @@ export function surnamePos(surname, authors) {
   return -1;
 }
 
-function pickBest(title, cands, surname) {
+// Best candidate by title; ties between papers with the same title are broken by author and year.
+function pickBest(title, cands, surname, year) {
   let best = null;
   for (const c of cands) {
-    let sim = titleSim(title, c.title);
-    if (sim >= 0.6 && surname && surnamePos(surname, c.authors) >= 0) sim = Math.min(1, sim + 0.02);
-    if (!best || sim > best.sim) best = { work: c, sim };
+    const sim = titleMatch(title, c.title);
+    let score = sim;
+    if (surname && surnamePos(surname, c.authors) >= 0) score += 0.02;
+    if (year && c.year && Math.abs(year - c.year) <= 1) score += 0.02;
+    if (!best || score > best.score) best = { work: c, sim, score };
   }
   return best;
+}
+
+async function enrich(work, sources) {
+  if (work.abstract.length >= 80 || !work.doi) return work;
+  try {
+    const r = await sources.byDoi(work.doi);
+    if (r.found && r.work.abstract) return { ...work, abstract: r.work.abstract };
+  } catch {
+    // best effort only
+  }
+  return work;
 }
 
 const ORDER = ["contradicts", "unrelated", "partial", "supports"];
@@ -76,7 +105,7 @@ export async function checkReference(ref, claimList, deps, opts = {}) {
       } else {
         out.level1 = { status: "not_found", how: "doi" };
         if (ref.title) {
-          const best = pickBest(ref.title, await sources.search(ref.title), ref.surname);
+          const best = pickBest(ref.title, await sources.search(ref.title), ref.surname, ref.year);
           if (best && best.sim >= 0.85) {
             work = best.work;
             out.level1 = { status: "found", how: "title" };
@@ -85,7 +114,7 @@ export async function checkReference(ref, claimList, deps, opts = {}) {
         }
       }
     } else if (ref.title) {
-      const best = pickBest(ref.title, await sources.search(ref.title), ref.surname);
+      const best = pickBest(ref.title, await sources.search(ref.title), ref.surname, ref.year);
       if (best && best.sim >= 0.85) {
         work = best.work;
         out.level1 = { status: "found", how: "title" };
@@ -101,9 +130,11 @@ export async function checkReference(ref, claimList, deps, opts = {}) {
     out.level1 = { status: "error", note: String(e.message).slice(0, 120) };
   }
 
+  if (work && out.level1.how === "title") work = await enrich(work, sources);
+
   if (work) {
     if (ref.title) {
-      const s = titleSim(ref.title, work.title);
+      const s = titleMatch(ref.title, work.title);
       if (s < 0.6) issues.push({ kind: "title_mismatch", level: "wrong", detail: `cited title does not match the record "${work.title}"` });
       else if (s < 0.85) issues.push({ kind: "title_differs", level: "minor", detail: `title differs a little from "${work.title}"` });
     }

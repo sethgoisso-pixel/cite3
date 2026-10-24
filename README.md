@@ -31,6 +31,17 @@ Everything runs in GitHub Actions. Add a repository secret named `LLM_API_KEY` (
 
 Tests (no network needed): `node --test`
 
+## Development log
+
+First run (seed 1, 197 cases) confirmed the idea: levels 1 and 2 caught 0% of real papers that do not support the sentence, level 3 caught 95% (unrelated) and 90% (opposite). It also had 5% false alarms and missed 3 fabricated references. Looking at each error found four real defects, all fixed:
+
+1. A title with a question mark in the middle was cut at the question mark.
+2. A title starting with a quotation mark was parsed wrongly, and soft hyphens in names broke matching.
+3. Two papers with the same title: the checker now prefers the one whose author and year match.
+4. A paper found by title with no abstract now gets its abstract from its DOI.
+
+Because the checker was fixed after looking at that sample, the final numbers come from a second run on a fresh sample of papers (seed 2). The first run stays in the git history.
+
 ## Limits
 
 - The judge only sees the abstract, not the full paper.

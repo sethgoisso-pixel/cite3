@@ -179,7 +179,7 @@ const TYPE_INFO = {
   misused: ["Real paper, unrelated to the sentence", "caught: higher is better"],
   contradicted: ["Real paper, sentence says the opposite", "caught: higher is better"],
 };
-const VARIANTS = [["L1", "v1", "1 Exists?"], ["L1L2", "v2", "1 + 2 Details"], ["L1L2L3", "v3", "1 + 2 + 3 Claim"]];
+const VARIANTS = [["L1", "v1", "1 Exists?"], ["L1L2", "v2", "1 + 2 Details"], ["L1L2L3", "v3", "1 + 2 + 3 Claim"], ["ANY", "v4", "Any alert"]];
 
 function wilson(k, n) {
   if (!n) return [0, 0];
@@ -202,11 +202,14 @@ function renderResults(data) {
     h("li", {}, `Real papers that do not support the sentence: level 1 and 2 flag ${rate("misused", "L1L2")}% of unrelated ones and ${rate("contradicted", "L1L2")}% of contradicted ones. With level 3 it is ${rate("misused", "L1L2L3")}% and ${rate("contradicted", "L1L2L3")}%.`),
     h("li", {}, `False alarms on correct references: ${rate("correct", "L1L2L3")}% with all three levels.`)
   );
+  const unv = Object.values(t).reduce((n, r) => n + (r.unverifiable || 0), 0);
+  const unvNote = unv ? h("p", { class: "muted" }, `${unv} cases could not be judged at level 3 because no abstract was available. They count as not flagged. "Any alert" also counts yellow warnings such as a close but not exact title match.`) : null;
   const bars = h("div", { class: "bars" });
   for (const type of Object.keys(TYPE_INFO)) {
     const row = t[type];
     const block = h("div", { class: "type" }, h("h3", {}, TYPE_INFO[type][0], " ", h("span", { class: "hint" }, "(" + TYPE_INFO[type][1] + ", " + row.valid + " cases)")));
     for (const [key, cls, label] of VARIANTS) {
+      if (row.flagged[key] === undefined) continue;
       const k = row.flagged[key];
       const [lo, hi] = wilson(k, row.valid);
       block.append(
@@ -218,7 +221,8 @@ function renderResults(data) {
   body.replaceChildren(
     h("p", { class: "muted" }, `${meta.cases} test cases from real papers. Judge: ${meta.models}. Run on ${meta.date}. Brackets show the 95% confidence interval.`),
     takeaways,
-    bars
+    bars,
+    unvNote
   );
 }
 

@@ -21,7 +21,7 @@ export function splitText(text) {
 }
 
 function firstSentence(s) {
-  const m = /^(.+?[?!])(\s|$)/.exec(s) || /^(.+?)(\.\s|\.$|$)/.exec(s);
+  const m = /^(.+?)(\.\s|\.$|$)/.exec(s);
   return (m ? m[1] : s).trim();
 }
 
@@ -40,7 +40,7 @@ export function firstSurname(authors) {
 }
 
 function parseOne(r) {
-  const raw = r.raw.replace(/\s+/g, " ").trim();
+  const raw = r.raw.replace(/[\u00ad\u200b]/g, "").replace(/\s+/g, " ").trim();
   const dm = DOI_RE.exec(raw);
   const doi = dm ? dm[0].replace(/[.,;)\]]+$/, "").toLowerCase() : "";
   const rest = raw
@@ -55,12 +55,12 @@ function parseOne(r) {
   let title = "";
   const q = /["\u201c]([^"\u201d]{8,})["\u201d]/.exec(rest);
   const apa = /^(.*?)\(\d{4}[a-z]?\)\.?\s*(.*)$/.exec(rest);
-  if (q) {
-    title = q[1].replace(/[.,]$/, "").trim();
-    authors = rest.slice(0, q.index).replace(/[,\s]+$/, "");
-  } else if (apa) {
+  if (apa) {
     authors = apa[1].trim().replace(/[.,\s]+$/, "");
     title = firstSentence(apa[2]);
+  } else if (q) {
+    title = q[1].replace(/[.,]$/, "").trim();
+    authors = rest.slice(0, q.index).replace(/[,\s]+$/, "");
   } else {
     const parts = rest.split(/\.\s+/).map((x) => x.trim()).filter(Boolean);
     authors = parts[0] || "";

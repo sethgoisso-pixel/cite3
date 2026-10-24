@@ -288,3 +288,41 @@ test("formatRef and wilson", () => {
   const [lo, hi] = wilson(50, 100);
   assert.ok(lo > 0.39 && lo < 0.41 && hi > 0.59 && hi < 0.61);
 });
+
+// ---------- regressions found by the first benchmark run ----------
+const mk = (over) => ({ doi: "10.9/z", title: "t", authors: ["A B"], year: 2020, venue: "", abstract: "x ".repeat(60), source: "mock", ...over });
+const searchOnly = (cands, byDoi) => ({ byDoi: byDoi || (async () => ({ found: false })), search: async () => cands });
+
+test("a title with a question mark in the middle is kept whole", async () => {
+  const text = "Learning helps [1].\n\nReferences\n[1] Huang, Z., Liu, Q., Chen, Y. (2020). Learning or Forgetting? A Dynamic Approach for Tracking the Knowledge Proficiency of Students. ACM Transactions on Information Systems.";
+  const ref = parseText(text).refs[0];
+  assert.equal(ref.title, "Learning or Forgetting? A Dynamic Approach for Tracking the Knowledge Proficiency of Students");
+  const rec = mk({ title: "Learning or Forgetting? A Dynamic Approach for Tracking the Knowledge Proficiency of Students", authors: ["Zhenya Huang"], year: 2020 });
+  const r = await checkReference(ref, ["Learning helps a lot here."], { sources: searchOnly([rec]), judge: judgeBy(() => "supports") });
+  assert.equal(r.level2.status, "ok");
+});
+
+test("an APA title that starts with a quotation mark, with a soft hyphen in a name", () => {
+  const text = "A claim here is made [1].\n\nReferences\n[1] Mangset, M., F\u00f8r\u00adde, R. (2008). \u201cI don\u2019t like that, it\u2019s tricking people too much\u2026\u201d: acute informed consent to participation in a trial. Journal of Medical Ethics.";
+  const ref = parseText(text).refs[0];
+  assert.ok(ref.title.includes("acute informed consent"));
+  assert.ok(!ref.raw.includes("\u00ad"));
+});
+
+test("two papers with the same title: the matching author and year win", async () => {
+  const wrong = mk({ doi: "10.9/a", title: "Does screening save lives and why it matters", authors: ["Alexander Katalinic"], year: 2012 });
+  const right = mk({ doi: "10.9/b", title: "Does screening save lives and why it matters", authors: ["Andreas Stang"], year: 2015 });
+  const ref = { id: 1, raw: "", doi: "", year: 2015, title: "Does screening save lives and why it matters", authors: "", surname: "Stang" };
+  const r = await checkReference(ref, ["Screening is useful in practice."], { sources: searchOnly([wrong, right]), judge: judgeBy(() => "supports") });
+  assert.equal(r.level2.status, "ok");
+  assert.equal(r.record.firstAuthor, "Andreas Stang");
+});
+
+test("a paper found by title but without abstract gets its abstract from its DOI", async () => {
+  const bare = mk({ doi: "10.9/c", title: "A quite specific title about corals", abstract: "" });
+  const full = mk({ doi: "10.9/c", title: "A quite specific title about corals" });
+  const src = searchOnly([bare], async () => ({ found: true, work: full }));
+  const ref = { id: 1, raw: "", doi: "", year: 2020, title: "A quite specific title about corals", authors: "", surname: "B" };
+  const r = await checkReference(ref, ["Corals are affected by heat."], { sources: src, judge: judgeBy(() => "supports") });
+  assert.equal(r.level3.status, "supports");
+});
