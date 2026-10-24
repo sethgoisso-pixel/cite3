@@ -13,6 +13,9 @@ on:
       n_per_type:
         description: "Cases per type (run only, max 60)"
         default: "40"
+      seed:
+        description: "Random seed. Use a new number for a fresh sample of papers."
+        default: "2"
 
 permissions:
   contents: write
@@ -32,6 +35,7 @@ jobs:
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           N_PER_TYPE: ${{ inputs.n_per_type }}
+          SEED: ${{ inputs.seed }}
         run: node bench-run.mjs "${{ inputs.mode }}"
       - name: Show summary
         if: always()
