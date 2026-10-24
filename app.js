@@ -165,7 +165,7 @@ async function run() {
 function setupExamples() {
   const box = $("#examples");
   for (const ex of EXAMPLES) {
-    box.append(h("button", { class: "btn ghost", type: "button", onclick: () => { $("#input").value = ex.text; $("#out").replaceChildren(); $("#status").textContent = ""; } }, ex.name));
+    box.append(h("button", { class: "chip", type: "button", "aria-pressed": "false", onclick: (ev) => { $("#input").value = ex.text; $("#out").replaceChildren(); $("#status").textContent = ""; box.querySelectorAll(".chip").forEach((b) => b.setAttribute("aria-pressed", "false")); ev.currentTarget.setAttribute("aria-pressed", "true"); } }, ex.name));
   }
   $("#input").value = EXAMPLES[1].text;
   $("#go").addEventListener("click", run);
@@ -189,21 +189,23 @@ function wilson(k, n) {
 }
 const pct = (k, n) => (n ? Math.round((100 * k) / n) : 0);
 
+function stat(num, cap) {
+  return h("div", { class: "stat" }, h("span", { class: "num" }, num), h("span", { class: "cap" }, cap));
+}
+
 function renderResults(data) {
   const body = $("#results-body");
   const { summary, meta } = data;
   const t = summary.byType;
   const rate = (type, v) => pct(t[type].flagged[v], t[type].valid);
-  const takeaways = h(
-    "ul",
-    { class: "takeaways" },
-    h("li", {}, `Fabricated references: checking existence alone flags ${rate("fabricated", "L1")}%.`),
-    h("li", {}, `Wrong details: level 1 flags ${rate("wrong_details", "L1")}%, levels 1 and 2 together flag ${rate("wrong_details", "L1L2")}%.`),
-    h("li", {}, `Real papers that do not support the sentence: level 1 and 2 flag ${rate("misused", "L1L2")}% of unrelated ones and ${rate("contradicted", "L1L2")}% of contradicted ones. With level 3 it is ${rate("misused", "L1L2L3")}% and ${rate("contradicted", "L1L2L3")}%.`),
-    h("li", {}, `False alarms on correct references: ${rate("correct", "L1L2L3")}% with all three levels.`)
+  const both = (v) => pct(t.misused.flagged[v] + t.contradicted.flagged[v], t.misused.valid + t.contradicted.valid);
+  const ledger = h(
+    "div",
+    { class: "ledger" },
+    stat(`${rate("fabricated", "L1")}%`, "of invented references are caught just by checking that they exist"),
+    stat(`${both("L1L2")}% to ${both("L1L2L3")}%`, "of real papers cited for something they do not say are caught, without and with level 3"),
+    stat(`${rate("correct", "L1L2L3")}%`, "false alarms on correct references, with all three levels")
   );
-  const unv = Object.values(t).reduce((n, r) => n + (r.unverifiable || 0), 0);
-  const unvNote = unv ? h("p", { class: "muted" }, `${unv} cases could not be judged at level 3 because no abstract was available. They count as not flagged. "Any alert" also counts yellow warnings such as a close but not exact title match.`) : null;
   const bars = h("div", { class: "bars" });
   for (const type of Object.keys(TYPE_INFO)) {
     const row = t[type];
@@ -213,17 +215,31 @@ function renderResults(data) {
       const k = row.flagged[key];
       const [lo, hi] = wilson(k, row.valid);
       block.append(
-        h("div", { class: "bar" }, h("span", {}, label), h("div", { class: "track" }, h("div", { class: "fill " + cls, style: `width:${pct(k, row.valid)}%` })), h("span", { class: "val" }, `${pct(k, row.valid)}% (${Math.round(lo * 100)}-${Math.round(hi * 100)})`))
+        h("div", { class: "bar" }, h("span", {}, label), h("div", { class: "track" }, h("div", { class: "fill " + cls, "data-w": String(pct(k, row.valid)) })), h("span", { class: "val" }, `${pct(k, row.valid)}% (${Math.round(lo * 100)}-${Math.round(hi * 100)})`))
       );
     }
     bars.append(block);
   }
+  const unv = Object.values(t).reduce((n, r) => n + (r.unverifiable || 0), 0);
+  const unvNote = unv ? h("p", { class: "muted" }, `${unv} cases could not be judged at level 3 because no abstract was available. They count as not flagged. "Any alert" also counts yellow warnings such as a close but not exact title match.`) : null;
   body.replaceChildren(
-    h("p", { class: "muted" }, `${meta.cases} test cases from real papers. Judge: ${meta.models}. Run on ${meta.date}. Brackets show the 95% confidence interval.`),
-    takeaways,
-    bars,
-    unvNote
+    ...[
+      h("p", { class: "muted" }, `${meta.cases} test cases built from real papers. Judge: ${meta.models}. Run on ${meta.date}. Brackets show the 95% confidence interval.`),
+      ledger,
+      bars,
+      unvNote,
+    ].filter(Boolean)
   );
+  const grow = () => bars.querySelectorAll(".fill").forEach((f) => (f.style.width = f.dataset.w + "%"));
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting)) {
+        grow();
+        io.disconnect();
+      }
+    }, { threshold: 0.1 });
+    io.observe(bars);
+  } else grow();
 }
 
 async function loadResults() {

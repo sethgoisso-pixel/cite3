@@ -4,14 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cite 3</title>
-<meta name="description" content="Checks every citation at three levels: does it exist, are the details right, does the paper say what the sentence claims.">
+<meta name="description" content="Checks every citation three ways: does the source exist, are the details right, does the paper say what the sentence claims.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="top">
-  <div class="wrap">
-    <span class="brand">Cite 3</span>
-    <nav>
+  <div class="wrap bar-row">
+    <a class="brand" href="#top" translate="no">Cite<span class="three">3</span></a>
+    <nav aria-label="Sections">
       <a href="#try">Try it</a>
       <a href="#results">Results</a>
       <a href="#method">Method</a>
@@ -20,38 +23,63 @@
   </div>
 </header>
 
-<main class="wrap">
-  <section class="hero">
-    <h1>A source can exist and still be cited wrong.</h1>
-    <p class="lead">Cite 3 checks every citation in a text three ways, and we measured how much each check really catches.</p>
-    <ol class="steps">
-      <li><b>1 Exists?</b><span>Looked up in Crossref and OpenAlex.</span></li>
-      <li><b>2 Details right?</b><span>Title, year and first author against the real record.</span></li>
-      <li><b>3 Says that?</b><span>An AI reads the paper's abstract and the sentence that cites it.</span></li>
-    </ol>
-    <a class="btn" href="#try">Check a text</a>
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>A source can exist and still be cited wrong.</h1>
+      <p class="lead">Cite 3 checks each citation three ways, then shows how much each check really catches.</p>
+      <div class="cta">
+        <a class="btn btn-hi" href="#try">Check a text</a>
+        <a class="btn btn-line" href="#results">See the results</a>
+      </div>
+    </div>
+    <figure class="sheet" aria-label="Example of a checked sentence">
+      <div class="sheet-body">
+        <p class="sentence">Residual networks were introduced to <mark class="hl">improve speech recognition</mark><sup>[3]</sup>.</p>
+        <p class="refline">[3] He, K., Zhang, X., Ren, S., &amp; Sun, J. (2016). Deep residual learning for image recognition.</p>
+      </div>
+      <ul class="marks">
+        <li class="m1"><span class="tick ok" aria-hidden="true"></span><span><b>Exists</b>Found by DOI</span></li>
+        <li class="m2"><span class="tick ok" aria-hidden="true"></span><span><b>Details match</b>Title, year, first author</span></li>
+        <li class="m3"><span class="tick bad" aria-hidden="true"></span><span><b>Does not say that</b>The abstract is about image recognition</span></li>
+      </ul>
+    </figure>
+  </div>
+</section>
+
+<main>
+  <section class="levels-sec">
+    <div class="wrap">
+      <ol class="levels">
+        <li><span class="n">1</span><h3>Does it exist?</h3><p>We look the paper up in Crossref and OpenAlex.</p></li>
+        <li><span class="n">2</span><h3>Are the details right?</h3><p>Title, year and first author must match the real record.</p></li>
+        <li><span class="n">3</span><h3>Does it say that?</h3><p>An AI model reads the abstract and the sentence that cites it.</p></li>
+      </ol>
+    </div>
   </section>
 
-  <section id="try">
-    <h2>Try it</h2>
-    <p class="muted">Paste a text with numbered citations like <code>[1]</code> and a <code>References</code> list. Levels 1 and 2 run in your browser. Level 3 needs the live judge.</p>
+  <section id="try" class="wrap block">
+    <h2>Check a text</h2>
+    <p class="muted">Paste a text with numbered citations like <code translate="no">[1]</code> and a <code translate="no">References</code> list. Levels 1 and 2 run in your browser. Level 3 needs the live judge.</p>
     <div class="examples" id="examples"></div>
     <label for="input" class="sr">Text to check</label>
-    <textarea id="input" rows="12" spellcheck="false" placeholder="Paste your text and its References list here"></textarea>
+    <textarea id="input" rows="12" spellcheck="false" translate="no" placeholder="Paste your text and its References list here"></textarea>
     <div class="row">
-      <button id="go" class="btn" type="button">Check the citations</button>
+      <button id="go" class="btn btn-main" type="button">Check the citations</button>
       <span id="status" class="muted" role="status"></span>
     </div>
     <div id="out" class="out" aria-live="polite"></div>
   </section>
 
-  <section id="results">
-    <h2>What each check catches</h2>
-    <div id="results-body"><p class="muted">Loading results...</p></div>
+  <section id="results" class="results-sec">
+    <div class="wrap block">
+      <h2>What each check catches</h2>
+      <div id="results-body"><p class="muted">Loading results...</p></div>
+    </div>
   </section>
 
-  <section id="method">
-    <h2>Method</h2>
+  <section id="method" class="wrap block">
+    <h2>How we measured it</h2>
     <p>We build a labelled test set from real papers (a random sample from OpenAlex), so the right answer is known for every case. Each case is a short text with one citation.</p>
     <table class="plain">
       <thead><tr><th>Case type</th><th>What is wrong</th></tr></thead>
@@ -66,7 +94,7 @@
     <p>Every case is checked once. We then ask what a simpler checker would have flagged from the same run: level 1 only, levels 1 and 2, or all three.</p>
     <h3>Limits</h3>
     <ul>
-      <li>The judge reads the abstract, not the full paper. Some publishers do not share abstracts, so those citations show as "cannot verify" instead of a guess.</li>
+      <li>The judge reads the abstract, not the full paper. When a publisher shares no abstract, the citation shows as "cannot verify" instead of a guess.</li>
       <li>The test cases are generated from real papers, not collected from real AI answers.</li>
       <li>The set is small. Read the confidence intervals, not only the percentages.</li>
       <li>Free-tier models can change. Lookup errors are counted separately and never hidden.</li>
@@ -74,8 +102,8 @@
   </section>
 </main>
 
-<footer class="wrap foot">
-  <span>Cite 3. MIT license. Built for Arbiter Hacks V1.</span>
+<footer class="foot">
+  <div class="wrap"><span translate="no">Cite 3</span> is open source under the MIT license. Built for Arbiter Hacks V1.</div>
 </footer>
 <script type="module" src="app.js"></script>
 </body>
