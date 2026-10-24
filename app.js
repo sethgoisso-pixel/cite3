@@ -189,23 +189,17 @@ function wilson(k, n) {
 }
 const pct = (k, n) => (n ? Math.round((100 * k) / n) : 0);
 
-function stat(num, cap) {
-  return h("div", { class: "stat" }, h("span", { class: "num" }, num), h("span", { class: "cap" }, cap));
+function vsRow(label, a, b, hint) {
+  return h(
+    "div",
+    { class: "vs" },
+    h("div", { class: "vs-label" }, label, hint ? h("span", { class: "hint" }, " " + hint) : null),
+    h("div", { class: "bar" }, h("span", { class: "who" }, "Existence only"), h("div", { class: "track" }, h("div", { class: "fill v1", "data-w": String(a) })), h("span", { class: "val" }, a + "%")),
+    h("div", { class: "bar" }, h("span", { class: "who" }, "Cite 3"), h("div", { class: "track" }, h("div", { class: "fill v3", "data-w": String(b) })), h("span", { class: "val" }, b + "%"))
+  );
 }
 
-function renderResults(data) {
-  const body = $("#results-body");
-  const { summary, meta } = data;
-  const t = summary.byType;
-  const rate = (type, v) => pct(t[type].flagged[v], t[type].valid);
-  const both = (v) => pct(t.misused.flagged[v] + t.contradicted.flagged[v], t.misused.valid + t.contradicted.valid);
-  const ledger = h(
-    "div",
-    { class: "ledger" },
-    stat(`${rate("fabricated", "L1")}%`, "of invented references are caught just by checking that they exist"),
-    stat(`${both("L1L2")}% to ${both("L1L2L3")}%`, "of real papers cited for something they do not say are caught, without and with level 3"),
-    stat(`${rate("correct", "L1L2L3")}%`, "false alarms on correct references, with all three levels")
-  );
+function detailBars(t) {
   const bars = h("div", { class: "bars" });
   for (const type of Object.keys(TYPE_INFO)) {
     const row = t[type];
@@ -215,22 +209,51 @@ function renderResults(data) {
       const k = row.flagged[key];
       const [lo, hi] = wilson(k, row.valid);
       block.append(
-        h("div", { class: "bar" }, h("span", {}, label), h("div", { class: "track" }, h("div", { class: "fill " + cls, "data-w": String(pct(k, row.valid)) })), h("span", { class: "val" }, `${pct(k, row.valid)}% (${Math.round(lo * 100)}-${Math.round(hi * 100)})`))
+        h("div", { class: "bar" }, h("span", { class: "who" }, label), h("div", { class: "track" }, h("div", { class: "fill " + cls, "data-w": String(pct(k, row.valid)) })), h("span", { class: "val" }, `${pct(k, row.valid)}% (${Math.round(lo * 100)}-${Math.round(hi * 100)})`))
       );
     }
     bars.append(block);
   }
+  return bars;
+}
+
+function renderResults(data) {
+  const body = $("#results-body");
+  const { summary, meta } = data;
+  const t = summary.byType;
+  const rate = (type, v) => pct(t[type].flagged[v], t[type].valid);
+  const both = (v) => pct(t.misused.flagged[v] + t.contradicted.flagged[v], t.misused.valid + t.contradicted.valid);
+
+  const headline = h("p", { class: "headline" }, `Checking only that a source exists misses ${100 - both("L1")}% of real papers cited for something they do not say. Cite 3 catches ${both("L1L2L3")}% of them.`);
+  const chart = h(
+    "div",
+    { class: "vs-chart" },
+    vsRow("Invented source", rate("fabricated", "L1"), rate("fabricated", "L1L2L3")),
+    vsRow("Real source, wrong year or author", rate("wrong_details", "L1"), rate("wrong_details", "L1L2L3")),
+    vsRow("Real paper that does not say that", both("L1"), both("L1L2L3")),
+    vsRow("Correct source flagged by mistake", rate("correct", "L1"), rate("correct", "L1L2L3"), "(lower is better)")
+  );
   const unv = Object.values(t).reduce((n, r) => n + (r.unverifiable || 0), 0);
-  const unvNote = unv ? h("p", { class: "muted" }, `${unv} cases could not be judged at level 3 because no abstract was available. They count as not flagged. "Any alert" also counts yellow warnings such as a close but not exact title match.`) : null;
+  const detailsBox = h(
+    "details",
+    { class: "more" },
+    h("summary", {}, "All the numbers"),
+    h("p", { class: "muted" }, `${meta.cases} test cases built from real papers. Judge: ${meta.models}. Run on ${meta.date}. Brackets show the 95% confidence interval. "Any alert" also counts yellow warnings such as a close but not exact title match.`),
+    detailBars(t),
+    unv ? h("p", { class: "muted" }, `${unv} case(s) could not be judged at level 3 because no abstract was available. They count as not flagged.`) : null
+  );
   body.replaceChildren(
     ...[
-      h("p", { class: "muted" }, `${meta.cases} test cases built from real papers. Judge: ${meta.models}. Run on ${meta.date}. Brackets show the 95% confidence interval.`),
-      ledger,
-      bars,
-      unvNote,
+      headline,
+      chart,
+      h("p", { class: "muted small" }, `Test set: ${meta.cases} short texts built from real papers, with the right answer known.`),
+      detailsBox,
     ].filter(Boolean)
   );
-  const grow = () => bars.querySelectorAll(".fill").forEach((f) => (f.style.width = f.dataset.w + "%"));
+  const grow = () => body.querySelectorAll(".fill").forEach((f) => (f.style.width = f.dataset.w + "%"));
+  const target = body.querySelector(".vs-chart");
+  const openDetails = () => grow();
+  detailsBox.addEventListener("toggle", openDetails);
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver((entries) => {
       if (entries.some((e) => e.isIntersecting)) {
@@ -238,7 +261,7 @@ function renderResults(data) {
         io.disconnect();
       }
     }, { threshold: 0.1 });
-    io.observe(bars);
+    io.observe(target);
   } else grow();
 }
 

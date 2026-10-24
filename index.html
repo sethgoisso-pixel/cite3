@@ -60,7 +60,7 @@
 
   <section id="try" class="wrap block">
     <h2>Check a text</h2>
-    <p class="muted">Paste a text with numbered citations like <code translate="no">[1]</code> and a <code translate="no">References</code> list. Levels 1 and 2 run in your browser. Level 3 needs the live judge.</p>
+    <p class="muted">Paste a text with citations like <code translate="no">[1]</code> and a <code translate="no">References</code> list, or pick an example.</p>
     <div class="examples" id="examples"></div>
     <label for="input" class="sr">Text to check</label>
     <textarea id="input" rows="12" spellcheck="false" translate="no" placeholder="Paste your text and its References list here"></textarea>
@@ -73,32 +73,34 @@
 
   <section id="results" class="results-sec">
     <div class="wrap block">
-      <h2>What each check catches</h2>
+      <h2>What we found</h2>
       <div id="results-body"><p class="muted">Loading results...</p></div>
     </div>
   </section>
 
-  <section id="method" class="wrap block">
-    <h2>How we measured it</h2>
-    <p>We build a labelled test set from real papers (a random sample from OpenAlex), so the right answer is known for every case. Each case is a short text with one citation.</p>
-    <table class="plain">
-      <thead><tr><th>Case type</th><th>What is wrong</th></tr></thead>
-      <tbody>
-        <tr><td>correct</td><td>Nothing. Used to count false alarms.</td></tr>
-        <tr><td>fabricated</td><td>An invented reference: made-up title, and a made-up DOI in half the cases.</td></tr>
-        <tr><td>wrong_details</td><td>A real paper with a wrong year, a wrong first author, or a real DOI with another paper's title.</td></tr>
-        <tr><td>misused</td><td>A real paper with right details, but it is about something else than the sentence.</td></tr>
-        <tr><td>contradicted</td><td>A real paper with right details, but the sentence says the opposite of its abstract.</td></tr>
-      </tbody>
-    </table>
-    <p>Every case is checked once. We then ask what a simpler checker would have flagged from the same run: level 1 only, levels 1 and 2, or all three.</p>
-    <h3>Limits</h3>
-    <ul>
-      <li>The judge reads the abstract, not the full paper. When a publisher shares no abstract, the citation shows as "cannot verify" instead of a guess.</li>
-      <li>The test cases are generated from real papers, not collected from real AI answers.</li>
-      <li>The set is small. Read the confidence intervals, not only the percentages.</li>
-      <li>Free-tier models can change. Lookup errors are counted separately and never hidden.</li>
-    </ul>
+  <section id="method" class="wrap more-wrap">
+    <details class="more">
+      <summary>How we measured it, and the limits</summary>
+      <p>We build a test set from real papers (a random sample from OpenAlex), so the right answer is known for every case. Each case is a short text with one citation.</p>
+      <table class="plain">
+        <thead><tr><th>Case type</th><th>What is wrong</th></tr></thead>
+        <tbody>
+          <tr><td>correct</td><td>Nothing. Used to count false alarms.</td></tr>
+          <tr><td>fabricated</td><td>An invented reference: made-up title, and a made-up DOI in half the cases.</td></tr>
+          <tr><td>wrong_details</td><td>A real paper with a wrong year, a wrong first author, or a real DOI with another paper's title.</td></tr>
+          <tr><td>misused</td><td>A real paper with right details, but about something else than the sentence.</td></tr>
+          <tr><td>contradicted</td><td>A real paper with right details, but the sentence says the opposite of its abstract.</td></tr>
+        </tbody>
+      </table>
+      <p>Every case is checked once. We then ask what a simpler checker would have flagged from the same run: level 1 only, levels 1 and 2, or all three.</p>
+      <h3>Limits</h3>
+      <ul>
+        <li>The judge reads the abstract, not the full paper. When a publisher shares no abstract, the citation shows as "cannot verify" instead of a guess.</li>
+        <li>The test cases are generated from real papers, not collected from real AI answers.</li>
+        <li>The set is small. Read the confidence intervals, not only the percentages.</li>
+        <li>Free-tier models can change. Lookup errors are counted separately and never hidden.</li>
+      </ul>
+    </details>
   </section>
 </main>
 
