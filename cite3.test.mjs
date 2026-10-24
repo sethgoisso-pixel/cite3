@@ -335,3 +335,10 @@ test("arXiv records: the year is not compared, because it is the date of the lat
   const j = await checkReference({ ...ref, doi: "10.1000/other" }, ["A claim sentence here."], { sources: searchOnly([], async () => ({ found: true, work: { ...w, doi: "10.1000/other" } })), judge: judgeBy(() => "supports") });
   assert.equal(j.level2.status, "wrong");
 });
+
+test("arXiv cited DOI: the year is not compared even when the record carries another DOI", async () => {
+  const w = mk({ doi: "10.52202/075280-0001", year: 2025, title: "Attention is all you need and more words", authors: ["Ashish Vaswani"] });
+  const ref = { id: 1, raw: "", doi: "10.48550/arxiv.1706.03762", year: 2017, title: "Attention is all you need and more words", authors: "", surname: "Vaswani" };
+  const r = await checkReference(ref, ["A claim sentence here."], { sources: searchOnly([], async () => ({ found: true, work: w })), judge: judgeBy(() => "supports") });
+  assert.equal(r.level2.status, "ok");
+});
