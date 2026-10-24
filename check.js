@@ -138,7 +138,9 @@ export async function checkReference(ref, claimList, deps, opts = {}) {
       if (s < 0.6) issues.push({ kind: "title_mismatch", level: "wrong", detail: `cited title does not match the record "${work.title}"` });
       else if (s < 0.85) issues.push({ kind: "title_differs", level: "minor", detail: `title differs a little from "${work.title}"` });
     }
-    if (ref.year && work.year) {
+    // arXiv records carry the date of the latest version, so their year says nothing about the cited year.
+    const preprint = /^10\.48550\/arxiv/i.test(work.doi || ref.doi || "");
+    if (ref.year && work.year && !preprint) {
       const d = Math.abs(ref.year - work.year);
       if (d >= 2) issues.push({ kind: "year_mismatch", level: "wrong", detail: `cited year ${ref.year}, record says ${work.year}` });
       else if (d === 1) issues.push({ kind: "year_off_by_one", level: "minor", detail: `cited year ${ref.year}, record says ${work.year}` });

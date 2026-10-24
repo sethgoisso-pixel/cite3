@@ -48,12 +48,12 @@ const EXAMPLES = [
   {
     name: "Real paper, wrong claim",
     text: [
-      "Adam was shown to be slower than plain gradient descent on every benchmark [1]. Residual networks were introduced to improve speech recognition [2]. Attention is all you need was published in 2019 [3].",
+      "Adam was shown to be slower than plain gradient descent on every benchmark [1]. Residual networks were introduced to improve speech recognition [2]. Deep learning lets models learn representations at several levels of abstraction [3].",
       "",
       "References",
       REFS.adam.replace("[2]", "[1]"),
       REFS.resnet.replace("[3]", "[2]"),
-      "[3] Vaswani, A., Shazeer, N., Parmar, N. (2019). Attention is all you need. arXiv. https://doi.org/10.48550/arXiv.1706.03762",
+      "[3] LeCun, Y., Bengio, Y., & Hinton, G. (2019). Deep learning. Nature. https://doi.org/10.1038/nature14539",
     ].join("\n"),
   },
 ];

@@ -326,3 +326,12 @@ test("a paper found by title but without abstract gets its abstract from its DOI
   const r = await checkReference(ref, ["Corals are affected by heat."], { sources: src, judge: judgeBy(() => "supports") });
   assert.equal(r.level3.status, "supports");
 });
+
+test("arXiv records: the year is not compared, because it is the date of the latest version", async () => {
+  const w = mk({ doi: "10.48550/arxiv.1706.03762", year: 2025, title: "Attention is all you need and more words", authors: ["Ashish Vaswani"] });
+  const ref = { id: 1, raw: "", doi: "10.48550/arxiv.1706.03762", year: 2017, title: "Attention is all you need and more words", authors: "", surname: "Vaswani" };
+  const r = await checkReference(ref, ["A claim sentence here."], { sources: searchOnly([], async () => ({ found: true, work: w })), judge: judgeBy(() => "supports") });
+  assert.equal(r.level2.status, "ok");
+  const j = await checkReference({ ...ref, doi: "10.1000/other" }, ["A claim sentence here."], { sources: searchOnly([], async () => ({ found: true, work: { ...w, doi: "10.1000/other" } })), judge: judgeBy(() => "supports") });
+  assert.equal(j.level2.status, "wrong");
+});
