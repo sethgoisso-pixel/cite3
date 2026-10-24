@@ -43,6 +43,17 @@ jobs:
           for f in smoke.md summary.md; do
             if [ -f "$f" ]; then cat "$f" >> "$GITHUB_STEP_SUMMARY"; fi
           done
+      - name: Keep a copy of the results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cite3-results
+          path: |
+            results.json
+            summary.md
+            cases.json
+            smoke.md
+          if-no-files-found: ignore
       - name: Save results to the repository
         if: ${{ inputs.mode == 'run' && success() }}
         run: |
@@ -50,4 +61,5 @@ jobs:
           git config user.email "cite3-bot@users.noreply.github.com"
           git add results.json summary.md cases.json
           git commit -m "Benchmark results" || echo "nothing to commit"
+          git pull --rebase origin main
           git push
