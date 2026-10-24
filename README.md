@@ -27,9 +27,23 @@ Each case is checked three times from the same run: level 1 only, levels 1+2, an
 Everything runs in GitHub Actions. Add a repository secret named `LLM_API_KEY` (a free Google AI Studio key), then open **Actions > Cite 3 benchmark > Run workflow**.
 
 - `smoke`: a one-minute check that Crossref, OpenAlex and Gemini all answer.
-- `run`: the full benchmark (about 30 minutes). Results are committed to the repository.
+- `run`: the full benchmark (about 1.5 hours on the free tier). Results are committed to the repository.
 
 Tests (no network needed): `node --test`
+
+## Results
+
+Final run: 200 test cases (40 per type) built from a fresh random sample of real papers (seed 2), judged by Gemini 3.1 and 3.5 Flash-Lite. Share of cases flagged, with the 95% confidence interval.
+
+| Case type | Level 1 only (exists?) | Levels 1+2 (+ details) | Levels 1+2+3 (+ claim) |
+|---|---|---|---|
+| correct (false alarms, lower is better) | 0% (0-9) | 0% (0-9) | 0% (0-9) |
+| fabricated | 78% (62-88) | 80% (65-90) | 80% (65-90) |
+| wrong year, author or title | 0% (0-9) | 100% (91-100) | 100% (91-100) |
+| real paper, unrelated to the sentence | 0% (0-9) | 0% (0-9) | 100% (91-100) |
+| real paper, sentence says the opposite | 0% (0-9) | 0% (0-9) | 90% (77-96) |
+
+Reading it: a checker that only looks at whether a source exists catches no real paper that is cited for something it does not say. Cite 3 catches 76 of those 80 cases. All 40 invented references raise at least a warning. See `summary.md` for the "any alert" column, which also counts yellow warnings (a correct reference got a warning in 3 of 40 cases).
 
 ## Development log
 
