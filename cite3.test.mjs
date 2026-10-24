@@ -164,6 +164,20 @@ test("byDoi: found in Crossref, abstract topped up from OpenAlex", async () => {
   assert.equal(r.work.abstract, "hello world");
 });
 
+test("byDoi: abstract falls back to Semantic Scholar when the other two have none", async () => {
+  const noAbs = (r) => ({ ...r, body: r === CR_OK ? { message: { ...CR_OK.body.message, abstract: "" } } : { ...OA_OK.body, abstract_inverted_index: null } });
+  const longText = "This is a long enough abstract text that comes from the third source and has more than eighty characters.";
+  const s = makeSources({
+    fetchImpl: fakeFetch([["crossref", noAbs(CR_OK)], ["openalex", noAbs(OA_OK)], ["semanticscholar", { status: 200, body: { abstract: longText } }]]),
+    retryMs: 1,
+  });
+  const r = await s.byDoi("10.1/x");
+  assert.equal(r.work.abstract, longText);
+  assert.equal(r.work.abstractSource, "semanticscholar");
+  const s2 = makeSources({ fetchImpl: fakeFetch([["crossref", noAbs(CR_OK)], ["openalex", noAbs(OA_OK)], ["semanticscholar", "throw"]]), retryMs: 1 });
+  assert.equal((await s2.byDoi("10.1/x")).work.abstract, "");
+});
+
 test("byDoi: not found only when both sources say 404; throws when it cannot tell", async () => {
   const none = makeSources({ fetchImpl: fakeFetch([]), retryMs: 1 });
   assert.deepEqual(await none.byDoi("10.1/none"), { found: false });

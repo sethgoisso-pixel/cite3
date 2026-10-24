@@ -134,6 +134,8 @@ export async function checkReference(ref, claimList, deps, opts = {}) {
         for (const c of claims.slice(0, 2)) verdicts.push(await judge({ claim: c, title: work.title, abstract: work.abstract }));
         out.level3 = worst(verdicts);
       }
+    } else {
+      out.level3 = { status: "skipped", reason: "not checked: the details are already wrong" };
     }
   }
 

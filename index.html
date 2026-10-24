@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cite 3</title>
+<meta name="description" content="Checks every citation at three levels: does it exist, are the details right, does the paper say what the sentence claims.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <span class="brand">Cite 3</span>
+    <nav>
+      <a href="#try">Try it</a>
+      <a href="#results">Results</a>
+      <a href="#method">Method</a>
+      <a href="https://github.com/sethgoisso-pixel/cite3">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>A source can exist and still be cited wrong.</h1>
+    <p class="lead">Cite 3 checks every citation in a text three ways, and we measured how much each check really catches.</p>
+    <ol class="steps">
+      <li><b>1 Exists?</b><span>Looked up in Crossref and OpenAlex.</span></li>
+      <li><b>2 Details right?</b><span>Title, year and first author against the real record.</span></li>
+      <li><b>3 Says that?</b><span>An AI reads the paper's abstract and the sentence that cites it.</span></li>
+    </ol>
+    <a class="btn" href="#try">Check a text</a>
+  </section>
+
+  <section id="try">
+    <h2>Try it</h2>
+    <p class="muted">Paste a text with numbered citations like <code>[1]</code> and a <code>References</code> list. Levels 1 and 2 run in your browser. Level 3 needs the live judge.</p>
+    <div class="examples" id="examples"></div>
+    <label for="input" class="sr">Text to check</label>
+    <textarea id="input" rows="12" spellcheck="false" placeholder="Paste your text and its References list here"></textarea>
+    <div class="row">
+      <button id="go" class="btn" type="button">Check the citations</button>
+      <span id="status" class="muted" role="status"></span>
+    </div>
+    <div id="out" class="out" aria-live="polite"></div>
+  </section>
+
+  <section id="results">
+    <h2>What each check catches</h2>
+    <div id="results-body"><p class="muted">Loading results...</p></div>
+  </section>
+
+  <section id="method">
+    <h2>Method</h2>
+    <p>We build a labelled test set from real papers (a random sample from OpenAlex), so the right answer is known for every case. Each case is a short text with one citation.</p>
+    <table class="plain">
+      <thead><tr><th>Case type</th><th>What is wrong</th></tr></thead>
+      <tbody>
+        <tr><td>correct</td><td>Nothing. Used to count false alarms.</td></tr>
+        <tr><td>fabricated</td><td>An invented reference: made-up title, and a made-up DOI in half the cases.</td></tr>
+        <tr><td>wrong_details</td><td>A real paper with a wrong year, a wrong first author, or a real DOI with another paper's title.</td></tr>
+        <tr><td>misused</td><td>A real paper with right details, but it is about something else than the sentence.</td></tr>
+        <tr><td>contradicted</td><td>A real paper with right details, but the sentence says the opposite of its abstract.</td></tr>
+      </tbody>
+    </table>
+    <p>Every case is checked once. We then ask what a simpler checker would have flagged from the same run: level 1 only, levels 1 and 2, or all three.</p>
+    <h3>Limits</h3>
+    <ul>
+      <li>The judge reads the abstract, not the full paper. Some publishers do not share abstracts, so those citations show as "cannot verify" instead of a guess.</li>
+      <li>The test cases are generated from real papers, not collected from real AI answers.</li>
+      <li>The set is small. Read the confidence intervals, not only the percentages.</li>
+      <li>Free-tier models can change. Lookup errors are counted separately and never hidden.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <span>Cite 3. MIT license. Built for Arbiter Hacks V1.</span>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

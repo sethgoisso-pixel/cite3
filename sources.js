@@ -3,6 +3,7 @@
 
 const CR = "https://api.crossref.org";
 const OA = "https://api.openalex.org";
+const S2 = "https://api.semanticscholar.org/graph/v1";
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -92,6 +93,17 @@ export function makeSources({ fetchImpl = globalThis.fetch, mailto = "", retryMs
           }
         } catch (e) {
           errors.push(e);
+        }
+      }
+      // Some publishers do not share abstracts with Crossref or OpenAlex. Try Semantic Scholar for the abstract only.
+      if (work && work.abstract.length < 80) {
+        try {
+          const r = await getJ(fetchImpl, `${S2}/paper/DOI:${doiPath(doi)}?fields=abstract`);
+          if (r.status === 200 && r.json && typeof r.json.abstract === "string" && r.json.abstract.length >= 80) {
+            work = { ...work, abstract: r.json.abstract.replace(/\s+/g, " ").trim(), abstractSource: "semanticscholar" };
+          }
+        } catch {
+          // best effort only
         }
       }
       if (work) return { found: true, work };
